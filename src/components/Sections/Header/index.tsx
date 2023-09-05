@@ -1,9 +1,11 @@
+import { FiMenu } from "react-icons/fi";
+
 const Header = () => {
     return (
-        <header className="py-7 w-full bg-blue-500">
+        <header className="py-7 w-full">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-row justify-between items-center">
-                <h1>LOGO</h1>
-                <h1>MENU</h1>
+                <h1 className="font-extrabold text-[1.2rem]">{"</>"}</h1>
+                <FiMenu className="cursor-pointer text-[1.8rem]"/>
             </div>
         </header>
     )
