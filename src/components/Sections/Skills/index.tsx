@@ -1,8 +1,41 @@
+import { GrMysql } from "react-icons/gr";
+import { FaReact, FaNodeJs, FaSass, FaLinux } from "react-icons/fa";
+import { SiNextdotjs, SiTailwindcss, SiPrisma, SiMongodb, SiLinuxmint } from "react-icons/si";
+import { BiLogoPostgresql, BiLogoTypescript, BiLogoJavascript } from "react-icons/bi";
+
 const Skills = () => {
+
+    const iconStyle = "w-16 h-16 mb-4 hover:scale-125 transition duration-500 ease-in-out";
+    const nameStyle = "text-sm";
+
+    const technologies = [
+        { id: 0, name: "React", alt: "React.js Icon", color: "hover:text-blue-500", icon: <FaReact className={iconStyle} /> },
+        { id: 1, name: "Node", alt: "Node.js Icon", color: "hover:text-green-500", icon: <FaNodeJs className={iconStyle} /> },
+        { id: 2, name: "Next", alt: "Next.js Icon", color: "hover:text-blue-50", icon: <SiNextdotjs className={iconStyle} /> },
+        { id: 3, name: "TypeScript", alt: "TypeScript Icon", color: "hover:text-blue-600", icon: <BiLogoTypescript className={iconStyle} /> },
+        { id: 4, name: "JavaScript", alt: "JavaScript Icon", color: "hover:text-yellow-400", icon: <BiLogoJavascript className={iconStyle} /> },
+        { id: 5, name: "Tailwind CSS", alt: "Tailwind CSS Icon", color: "hover:text-cyan-600", icon: <SiTailwindcss className={iconStyle} /> },
+        { id: 6, name: "Sass", alt: "Sass Icon",  color: "hover:text-pink-400", icon: <FaSass className={iconStyle} /> },
+        { id: 7, name: "Prisma ORM", alt: "Prisma ORM Icon", color:"hover:text-indigo-500", icon: <SiPrisma className={iconStyle} /> },
+        { id: 8, name: "MySQL", alt: "MySQL Icon", color: "hover:text-amber-600", icon: <GrMysql className={iconStyle} /> },
+        { id: 9, name: "PostgreSQL", alt: "PostgreSQL Icon", color: "hover:text-sky-600", icon: <BiLogoPostgresql className={iconStyle} /> },
+        { id: 10, name: "MongoDB", alt: "MongoDB Icon", color:"hover:text-emerald-500", icon: <SiMongodb className={iconStyle} /> },
+        { id: 11, name: "Linux", alt: "Linux Icon", color: "hover:text-cyan-800", icon: <SiLinuxmint className={iconStyle} /> },
+    ];
+
     return (
         <section className="py-7 w-full">
             <div className="max-w-6xl mx-auto px-4 sm:px-6">
-                <h1>SKILLS</h1>
+                <h1 className="text-center text-[1.5rem] font-bold mb-10">Tecnologias</h1>
+
+                <div className="w-full flex flex-row flex-wrap justify-between items-center">
+                    {technologies?.map((tech) => (
+                        <div key={tech.id} className="min-w-[12rem] flex flex-col justify-center items-center mb-10">
+                            <button className={`${tech.color}`} name={tech.alt}>{tech.icon}</button>
+                            <p className={nameStyle}>{tech.name}</p>
+                        </div>
+                    ))}
+                </div>
             </div>
         </section>
     )
