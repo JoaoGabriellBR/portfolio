@@ -1,9 +1,9 @@
-const Button = ({ children, type, ...props }: any) => {
+const Button = ({ children, ...props }: any) => {
 
-    // const bgColor = type === "outline" ? 'border border-1 border-white bg-transparent text-white' : 'border-none text-black bg-white';
+    const styles = `bg-white text-zinc-900 text-md font-bold rounded-full px-6 py-2 rounded-full flex justify-center items-center hover:opacity-80`
 
     return (
-        <button {...props} className={`bg-white text-zinc-900 text-sm rounded-full px-6 py-2 font-bold rounded-full flex justify-center items-center`}>
+        <button {...props} className={styles}>
             {children}
         </button>
     )

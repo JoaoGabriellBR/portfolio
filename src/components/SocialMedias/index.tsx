@@ -5,7 +5,7 @@ import { MdEmail } from "react-icons/md";
 const SocialMedias = () => {
 
     const divIconsStyle =
-        "w-10 h-10 flex justify-center items-center rounded-full cursor-pointer text-white dark:border-gray-800 dark:bg-neutral-800 border border-gray-100";
+        "w-10 h-10 flex justify-center items-center rounded-full cursor-pointer dark:border-gray-800 dark:bg-neutral-800 border border-gray-100 hover:opacity-80";
     const iconsStyle = "w-5 h-5 font-bold text-white";
 
     const email = "mailto:joaoname9@gmail.com";
