@@ -12,7 +12,7 @@ const Home = () => {
     <main className="flex flex-col overflow-hidden min-h-screen">
       <Header />
       <Jumbotron />
-      <div className='space-y-[10rem]'>
+      <div className='space-y-[5rem] md:space-y-[10rem]'>
         <AboutMe />
         <Skills />
         <Experiences />

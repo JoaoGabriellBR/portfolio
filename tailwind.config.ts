@@ -16,12 +16,16 @@ const config: Config = {
       colors: {
         'react': '#61DBFB',
         'node': '#6cc24a',
-        'next': '',
+        'next': '#FFF',
         'typescript': '#3178c6',
         'javascript': '#f0Db4f',
         'tailwind': '#38bdf8',
         'sass': '#cc6699',
-        'postgresql': '#3366cc',
+        'prisma': '#123A50',
+        'postgresql': '#2F6792',
+        'mysql': '#00758F',
+        'mongodb': '#00ED64',
+        'linux': '#69B53F'
       }
     },
   },

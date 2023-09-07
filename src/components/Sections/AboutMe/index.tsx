@@ -26,7 +26,7 @@ const AboutMe = () => {
                     />
                 </div>
 
-                <div className="w-full md:w-[50%] space-y-5">
+                <div className="flex flex-col items-center md:items-start w-full md:w-[50%] space-y-5 text-center md:text-start">
                     <h1 className={titleStyles}>Sobre mim</h1>
                     <p className="text-neutral-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nemo vitae
                         praesentium explicabo deleniti itaque aspernatur vero unde ex sequi!
