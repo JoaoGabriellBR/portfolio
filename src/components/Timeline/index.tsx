@@ -4,9 +4,11 @@ const Timeline = ({ events, Icon }: any) => {
   const divItemStyle = "relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active";
   const divIconStyle = "flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 group-[.is-active]:bg-white text-slate-500 group-[.is-active]:text-emerald-50 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2";
   const divCardStyle = "w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-4 flex flex-col justify-start";
+  const divTitle = "flex flex-row justify-start space-x-2 items-center flex-wrap";
   const iconStyle = "fill-current text-black w-5 h-5";
   const titleStyle = "text-xl font-bold"
-  const dateStyle = "font-caveat text-sm mb-2";
+  const dateStyle = "font-caveat text-neutral-400 text-[0.7rem]";
+  const occupationStyle = "text-neutral-400 text-md mb-2 font-bold";
   const descriptionStyle = "text-neutral-400";
 
   return (
@@ -20,13 +22,11 @@ const Timeline = ({ events, Icon }: any) => {
             </div>
             {/* <!-- Card --> */}
             <div className={divCardStyle}>
-
-              <div className="flex flex-row justify-start space-x-2 items-center flex-wrap">
+              <div className={divTitle}>
                 <h1 className={titleStyle}>{item.title}</h1>
-                <h2 className="text-neutral-400 text-md">{item.occupation}</h2>
+                <time className={dateStyle}>{item.date}</time>
               </div>
-
-              <time className={dateStyle}>{item.date}</time>
+              <h2 className={occupationStyle}>{item.occupation}</h2>
               <p className={descriptionStyle}>{item.description}</p>
             </div>
           </div>
