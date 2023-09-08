@@ -34,13 +34,15 @@ const Experiences = () => {
   const education = [
     {
       date: "Agosto 2021",
-      title: "Uniessa - Sistemas de Informação",
+      title: "Uniessa",
+      occupation: 'Sistemas de Informação',
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet minus numquam quidem, mollitia nesciunt reprehenderit tempore optio praesentium nostrum necessitatibus quod velit assumenda voluptates temporibus vel nihil debitis vitae nemo!",
     },
     {
       date: "Fevereiro 2022",
-      title: "OneBitCode - Desenvolvedor Web Full Stack",
+      title: "OneBitCode",
+      occupation: 'Desenvolvedor Web Full Stack',
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet minus numquam quidem, mollitia nesciunt reprehenderit tempore optio praesentium nostrum necessitatibus quod velit assumenda voluptates temporibus vel nihil debitis vitae nemo!",
     },
