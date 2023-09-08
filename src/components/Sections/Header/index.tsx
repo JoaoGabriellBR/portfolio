@@ -1,4 +1,4 @@
-import { FiMenu } from "react-icons/fi";
+import { HiMenuAlt1 } from "react-icons/hi";
 import Image from "next/image";
 import logo from "@/assets/logo.png";
 
@@ -12,7 +12,7 @@ const Header = () => {
                     width={40}
                     height={40}
                 />
-                <FiMenu className="cursor-pointer text-[1.8rem]" />
+                <HiMenuAlt1 className="cursor-pointer text-[2rem]" />
             </div>
         </header>
     )

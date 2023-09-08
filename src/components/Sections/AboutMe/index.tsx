@@ -14,7 +14,7 @@ const AboutMe = () => {
     }
 
     return (
-        <section className="py-7 w-full">
+        <section className="pt-32 w-full">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col-reverse md:flex-row justify-center md:justify-between items-start">
 
                 <div className="w-full md:w-[50%] hidden md:flex flex-row justify-center">

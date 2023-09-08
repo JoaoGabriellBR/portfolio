@@ -10,8 +10,10 @@ import Footer from '@/components/Sections/Footer';
 const Home = () => {
   return (
     <main className="flex flex-col overflow-hidden min-h-screen">
-      <Header />
-      <Jumbotron />
+      <div className='bg-jumbotron bg-no-repeat bg-cover bg-center'>
+        <Header />
+        <Jumbotron />
+      </div>
       <div className='space-y-[5rem] md:space-y-[7rem]'>
         <AboutMe />
         <Skills />

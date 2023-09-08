@@ -1,5 +1,6 @@
 import { PiStudentBold } from "react-icons/pi";
 import { CgWorkAlt } from "react-icons/cg";
+import Timeline from "@/components/Timeline";
 
 const Experiences = () => {
 
@@ -7,6 +8,19 @@ const Experiences = () => {
     const qualifications = [
         { name: 'Experiência', icon: <CgWorkAlt className={iconStyle} /> },
         { name: 'Educação', icon: <PiStudentBold className={iconStyle} /> }
+    ];
+
+    const events = [
+      {
+        date: 'January 2023',
+        title: 'Split Risk',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet minus numquam quidem, mollitia nesciunt reprehenderit tempore optio praesentium nostrum necessitatibus quod velit assumenda voluptates temporibus vel nihil debitis vitae nemo!',
+      },
+      {
+        date: 'February 2023',
+        title: 'Online Shopping',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet minus numquam quidem, mollitia nesciunt reprehenderit tempore optio praesentium nostrum necessitatibus quod velit assumenda voluptates temporibus vel nihil debitis vitae nemo!',
+      },
     ];
 
     return (
@@ -25,7 +39,7 @@ const Experiences = () => {
               </div>
             ))}
           </div>
-          
+          <Timeline events={events} />
         </div>
       </section>
     );
