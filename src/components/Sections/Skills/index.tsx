@@ -25,8 +25,8 @@ const Skills = () => {
 
     return (
         <section className="py-7 w-full">
-            <div className="max-w-6xl mx-auto px-4 sm:px-6">
-                <h1 className="text-center text-[1.5rem] font-bold mb-10">Tecnologias</h1>
+            <div className="max-w-6xl mx-auto space-y-10 px-4 sm:px-6">
+                <h1 className="text-center text-[1.5rem] font-bold">Tecnologias</h1>
 
                 <div className="w-full flex flex-row flex-wrap justify-center md:justify-between items-center">
                     {technologies?.map((tech) => (

@@ -2,7 +2,7 @@ import Header from '@/components/Sections/Header';
 import Jumbotron from '@/components/Sections/Jumbotron';
 import AboutMe from '@/components/Sections/AboutMe';
 import Skills from '@/components/Sections/Skills';
-import Experiences from '@/components/Sections/Experiences';
+import Qualifications from '@/components/Sections/Qualifications';
 import Projects from '@/components/Sections/Projects';
 import Contact from '@/components/Sections/Contact';
 import Footer from '@/components/Sections/Footer';
@@ -17,7 +17,7 @@ const Home = () => {
       <div className='space-y-[5rem] md:space-y-[7rem]'>
         <AboutMe />
         <Skills />
-        <Experiences />
+        <Qualifications />
         <Projects />
         <Contact />
         <Footer />

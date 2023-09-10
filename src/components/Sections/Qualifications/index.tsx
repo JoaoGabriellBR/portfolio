@@ -6,7 +6,7 @@ import Timeline from "@/components/Timeline";
 import { useState } from "react";
 import Button from "@/components/Button";
 
-const Experiences = () => {
+const Qualifications = () => {
   const [isSelected, setIsSelected] = useState<string>('Experiência');
 
   const iconStyle = "w-6 h-6";
@@ -86,4 +86,4 @@ const Experiences = () => {
   );
 };
 
-export default Experiences;
+export default Qualifications;
