@@ -1,26 +1,38 @@
-import Image from "next/image";
-import Button from "../Button";
+"use client";
 
-const ProjectItem = ({ project, index }: any) => {
+import { useState } from "react";
+import { VscGithub } from "react-icons/vsc";
+import { GoLinkExternal } from "react-icons/go";
+
+const ProjectItem = ({ project }: any) => {
+
+  const [isHovered, setIsHovered] = useState(false);
+
+  const iconStyle = `${isHovered ? "text-white" : "text-black"} w-6 h-6 font-bold`;
   return (
     <div
-      className={`w-full flex flex-${project.position} justify-between items-center`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      className={`${
+        isHovered
+          ? "bg-transparent border-solid border-2 border-white"
+          : project.gradient
+      } h-[22rem] p-5 rounded-lg flex flex-col items-center justify-between transition duration-500 ease-in-out`}
     >
-      <div className="w-full md:w-[50%] space-y-5">
-        <h1 className="text-[1.5rem]">{project.name}</h1>
-        <p className="text-neutral-400">{project.description}</p>
-        <Button>Ver projeto</Button>
+      <div className="w-full flex flex-row justify-end items-center space-x-3">
+        <button>
+          <VscGithub className={iconStyle} />
+        </button>
+        <button>
+          <GoLinkExternal className={iconStyle} />
+        </button>
       </div>
 
-      <div className="w-full md:w-[50%]">
-        <Image
-          key={index}
-          className="rounded-lg"
-          src={project.video}
-          alt={`Imagem do site ${project.alt}`}
-          width={300}
-          height={300}
-        />
+      <div className={`${isHovered ? 'text-white' : 'text-black'} flex flex-col justify-between items-center space-y-10 text-center`}>
+        <h1 className="text-[2.5rem] font-black">{project.name}</h1>
+        <p className="text-[0.6rem] font-bold tracking-[.15rem]">
+          {project.tecnologias}
+        </p>
       </div>
     </div>
   );
