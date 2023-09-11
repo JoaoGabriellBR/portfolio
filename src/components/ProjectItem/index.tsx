@@ -4,15 +4,29 @@ import { useState } from "react";
 import { VscGithub } from "react-icons/vsc";
 import { GoLinkExternal } from "react-icons/go";
 
-const ProjectItem = ({ project }: any) => {
+interface Project {
+  name: string;
+  technologies: string;
+  site: string;
+  repository: string;
+  gradient: string;
+};
 
-  const [isHovered, setIsHovered] = useState(false);
+interface ProjectItemProps {
+  project: Project;
+}
+
+const ProjectItem = ( { project }: ProjectItemProps) => {
+
+  const [isHovered, setIsHovered] = useState<boolean>(false);
 
   const iconStyle = `${isHovered ? "text-white" : "text-black"} w-6 h-6 font-bold`;
+  const handleChange = (value: boolean) => setIsHovered(value);
+
   return (
     <div
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseEnter={() => handleChange(true)}
+      onMouseLeave={() => handleChange(false)}
       className={`${
         isHovered
           ? "bg-transparent border-solid border-2 border-white"
@@ -31,7 +45,7 @@ const ProjectItem = ({ project }: any) => {
       <div className={`${isHovered ? 'text-white' : 'text-black'} flex flex-col justify-between items-center space-y-10 text-center`}>
         <h1 className="text-[2.5rem] font-black">{project.name}</h1>
         <p className="text-[0.6rem] font-bold tracking-[.15rem]">
-          {project.tecnologias}
+          {project.technologies}
         </p>
       </div>
     </div>

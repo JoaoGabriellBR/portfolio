@@ -1,6 +1,6 @@
 import { GrMysql } from "react-icons/gr";
 import { FaReact, FaNodeJs, FaSass } from "react-icons/fa";
-import { SiNextdotjs, SiTailwindcss, SiPrisma, SiMongodb, SiLinuxmint } from "react-icons/si";
+import { SiNextdotjs, SiTailwindcss, SiPrisma } from "react-icons/si";
 import { BiLogoPostgresql, BiLogoTypescript, BiLogoJavascript } from "react-icons/bi";
 
 const Skills = () => {
@@ -19,8 +19,6 @@ const Skills = () => {
         { id: 7, name: "Prisma ORM", alt: "Prisma ORM Icon", color:"hover:text-prisma", icon: <SiPrisma className={iconStyle} /> },
         { id: 8, name: "MySQL", alt: "MySQL Icon", color: "hover:text-mysql", icon: <GrMysql className={iconStyle} /> },
         { id: 9, name: "PostgreSQL", alt: "PostgreSQL Icon", color: "hover:text-postgresql", icon: <BiLogoPostgresql className={iconStyle} /> },
-        // { id: 10, name: "MongoDB", alt: "MongoDB Icon", color:"hover:text-mongodb", icon: <SiMongodb className={iconStyle} /> },
-        // { id: 11, name: "Linux", alt: "Linux Icon", color: "hover:text-linux", icon: <SiLinuxmint className={iconStyle} /> },
     ];
 
     return (
