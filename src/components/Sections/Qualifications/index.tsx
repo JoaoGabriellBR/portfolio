@@ -1,57 +1,13 @@
 "use client"
 
-import { PiStudentBold } from "react-icons/pi";
-import { CgWorkAlt } from "react-icons/cg";
-import Timeline from "@/components/Timeline";
 import { useState } from "react";
+import Timeline from "@/components/Timeline";
 import Button from "@/components/Button";
+import { qualifications } from "@/utils/qualifications";
 
 const Qualifications = () => {
+
   const [isSelected, setIsSelected] = useState<string>('Experiência');
-
-  const iconStyle = "w-6 h-6";
-  const job = [
-    {
-      date: "January 2023",
-      title: "Split Risk",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet minus numquam quidem, mollitia nesciunt reprehenderit tempore optio praesentium nostrum necessitatibus quod velit assumenda voluptates temporibus vel nihil debitis vitae nemo!",
-    },
-    {
-      date: "February 2023",
-      title: "Online Shopping",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet minus numquam quidem, mollitia nesciunt reprehenderit tempore optio praesentium nostrum necessitatibus quod velit assumenda voluptates temporibus vel nihil debitis vitae nemo!",
-    },
-    {
-      date: "February 2023",
-      title: "Online Shopping",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet minus numquam quidem, mollitia nesciunt reprehenderit tempore optio praesentium nostrum necessitatibus quod velit assumenda voluptates temporibus vel nihil debitis vitae nemo!",
-    },
-  ];
-
-  const education = [
-    {
-      date: "Agosto 2021",
-      title: "Uniessa",
-      occupation: 'Sistemas de Informação',
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet minus numquam quidem, mollitia nesciunt reprehenderit tempore optio praesentium nostrum necessitatibus quod velit assumenda voluptates temporibus vel nihil debitis vitae nemo!",
-    },
-    {
-      date: "Fevereiro 2022",
-      title: "OneBitCode",
-      occupation: 'Desenvolvedor Web Full Stack',
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet minus numquam quidem, mollitia nesciunt reprehenderit tempore optio praesentium nostrum necessitatibus quod velit assumenda voluptates temporibus vel nihil debitis vitae nemo!",
-    },
-  ];
-
-  const qualifications = [
-    { name: "Experiência", event: job, onlyIcon: CgWorkAlt, icon: <CgWorkAlt className={iconStyle} /> },
-    { name: "Educação", event: education, onlyIcon: PiStudentBold, icon: <PiStudentBold className={iconStyle} /> },
-  ];
 
   return (
     <section className="w-full">
@@ -75,7 +31,6 @@ const Qualifications = () => {
             </div>
           ))}
         </div>
-
 
         {qualifications?.map((item, index) => item.name === isSelected && (
           <Timeline key={index} events={item.event} Icon={item.onlyIcon} />
