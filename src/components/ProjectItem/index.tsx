@@ -1,8 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { VscGithub } from "react-icons/vsc";
 import { GoLinkExternal } from "react-icons/go";
+import finans from "@/assets/finans.png";
 
 interface Project {
   name: string;
@@ -49,7 +51,14 @@ const ProjectItem = ( { project }: ProjectItemProps) => {
 
       {/* <div className={`${isHovered ? 'text-white' : 'text-black'} flex flex-col justify-between items-center space-y-10 text-center`}> */}
       <div className={`text-white flex flex-col justify-between items-center space-y-10 text-center`}>
-        <h1 className="text-[2.5rem] font-black">{project.name}</h1>
+        {/* <h1 className="text-[2.5rem] font-black">{project.name}</h1>
+         */}
+            <Image
+                    src={finans}
+                    alt="Logo João Gabriel Silva"
+                    width={300}
+                    height={300}
+                />
         <p className="text-[0.6rem] font-bold tracking-[.15rem]">
           {project.technologies}
         </p>
