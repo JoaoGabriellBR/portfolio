@@ -35,6 +35,13 @@ export const education = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet minus numquam quidem, mollitia nesciunt reprehenderit tempore optio praesentium nostrum necessitatibus quod velit assumenda voluptates temporibus vel nihil debitis vitae nemo!",
   },
+  {
+    date: "Mai/2020 - Mar/2022",
+    title: "Microcamp",
+    occupation: 'Técnico em Hardware e Robótica',
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet minus numquam quidem, mollitia nesciunt reprehenderit tempore optio praesentium nostrum necessitatibus quod velit assumenda voluptates temporibus vel nihil debitis vitae nemo!",
+  },
 ];
 
 export const qualifications = [

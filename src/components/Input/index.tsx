@@ -1,21 +1,34 @@
-const Input = () => {
+"use client"
+
+import React, { useState } from 'react';
+
+const Input = ({ label, type, value, onChange }: any) => {
+
+  const [isFocused, setIsFocused] = useState(false);
+
+  const handleFocus = () => setIsFocused(true);
+  const handleBlur = () => setIsFocused(false);
+
   return (
-    <>
-      <input
-        type="email"
-        name="floating_email"
-        id="floating_email"
-        className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-white focus:outline-none focus:ring-0 focus:border-white peer"
-        placeholder=" "
-        required
-      />
+    <div className="relative w-full">
       <label
-        htmlFor="floating_email"
-        className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-white peer-focus:dark:text-white peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+        className={`absolute top-0 left-2 transition-transform ${
+          isFocused || value ? '-translate-y-4 text-sm text-white' : 'translate-y-2 text-base text-neutral-400'
+        }`}
+        htmlFor="floating-input"
       >
-        Seu Email
+        {label}
       </label>
-    </>
+      <input
+        id="floating-input"
+        type={type}
+        value={value}
+        onChange={onChange}
+        onFocus={handleFocus}
+        onBlur={handleBlur}
+        className="w-full py-3 px-2 bg-transparent border-b border-neutral-400 focus:outline-none focus:border-white"
+      />
+    </div>
   );
 };
 
