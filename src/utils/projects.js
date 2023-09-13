@@ -1,37 +1,51 @@
+import finans from "@/assets/finans.png";
+import worldNews from "@/assets/worldNews.png";
+import solarToy from "@/assets/solarToy.png";
+import reactNotes from "@/assets/reactNotes.png";
+import superMarioGame from "@/assets/superMarioGame.png";
+import superHeroApp from "@/assets/superHeroApp.png"
+
 export const projects = [
   {
     name: "Finans",
-    technologies: "REACT NODE TYPESCRIPT POSTGRESQL",
+    // technologies: "REACT NODE TYPESCRIPT POSTGRESQL",
     site: "https://siteappfinans.netlify.app",
     repository: "https://github.com/JoaoGabriellBR/finans",
-    gradient: "from-[#F4CDAD] to-[#FCE9C7]",
+    logo: finans,
   },
   {
     name: "React Notes",
-    technologies: "REACT NODE JAVASCRIPT MYSQL",
+    // technologies: "REACT NODE JAVASCRIPT MYSQL",
     site: "https://sitereactnotes.netlify.app",
     repository: "https://github.com/JoaoGabriellBR/reactnotes",
-    gradient: "bg-gradient-to-r from-[#B6E4F9] to-[#E4CEF2]",
+    logo: reactNotes,
   },
   {
     name: "World News",
-    technologies: "REACT NEXT TAILWINDCSS POSTGRESQL",
+    // technologies: "REACT NEXT TAILWINDCSS POSTGRESQL",
     site: "https://siteworldnews.vercel.app",
     repository: "https://github.com/JoaoGabriellBR/worldnews",
-    gradient: "bg-gradient-to-r from-[#F2A679] to-[#DBC4F2]",
+    logo: worldNews,
   },
   {
     name: "Solar Toy",
-    technologies: "REACT MATERIAL UI VITE",
+    // technologies: "REACT MATERIAL UI VITE",
     site: "https://solartoy.netlify.app",
     repository: "https://github.com/JoaoGabriellBR/solartoy",
-    gradient: "bg-gradient-to-r from-[#DCB4F1] to-[#EEB7D8]",
+    logo: solarToy,
   },
   {
     name: "Super Mario Game",
-    technologies: "TYPESCRIPT SASS",
+    // technologies: "TYPESCRIPT SASS",
     site: "https://gamesupermario.netlify.app",
     repositorry: "https://github.com/JoaoGabriellBR/SuperMarioGame",
-    gradient: "bg-gradient-to-r from-[#B6E4F9] to-[#E4CEF2]",
+    logo: superMarioGame,
+  },
+  {
+    name: "Super Hero App",
+    // technologies: "TYPESCRIPT SASS",
+    site: "https://super-hero-app-beige.vercel.app",
+    repositorry: "https://github.com/JoaoGabriellBR/SuperHeroApp",
+    logo: superHeroApp,
   },
 ];
