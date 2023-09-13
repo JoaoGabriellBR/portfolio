@@ -6,7 +6,7 @@ import { FiDownload } from "react-icons/fi";
 
 const Jumbotron = () => {
   const [isMouseOn, setIsMouseOn] = useState(false);
-  const titleStyle = "font-extrabold text-6xl md:text-8xl ml-0 md:ml-[10rem]";
+  const titleStyle = "font-extrabold text-5xl md:text-8xl ml-0 md:ml-[10rem]";
 
   return (
     <section className="w-full">
