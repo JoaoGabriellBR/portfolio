@@ -1,5 +1,5 @@
-"use client"
 import React, { useState } from 'react';
+import { AiOutlineWarning } from "react-icons/ai";
 
 interface InputProps {
   id: string;
@@ -7,15 +7,16 @@ interface InputProps {
   value: string;
   type: string;
   onChange: (e: any) => void;
+  error: boolean;
 }
 
-const Input: React.FC<InputProps> = ({ id, label, value, type, onChange }) => {
+const Input: React.FC<InputProps> = ({ id, label, value, type, onChange, error }) => {
   const [isFocused, setIsFocused] = useState<boolean>(false);
 
   const handleFocus = () => setIsFocused(true);
   const handleBlur = () => setIsFocused(false);
 
-  const inputStyles = "w-full py-3 px-2 bg-transparent border-b border-neutral-400 focus:outline-none focus:border-white";
+  const inputStyles = `${error ? 'border-red-500' : 'border-neutral-400'} w-full py-3 px-2 font-normal text-neutral-400 bg-transparent border-b focus:outline-none focus:border-white`;
 
   return (
     <div className="relative w-full">
@@ -45,6 +46,12 @@ const Input: React.FC<InputProps> = ({ id, label, value, type, onChange }) => {
           onBlur={handleBlur}
           className={inputStyles}
         />
+      )}
+      {error && (
+        <p className="mt-2 text-sm text-red-600 dark:text-red-500 flex items-center space-x-1">
+          <button><AiOutlineWarning className="text-lg" /></button>
+          <span>Preencha este campo!</span>
+        </p>
       )}
     </div>
   );
