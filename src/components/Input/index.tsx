@@ -18,6 +18,15 @@ const Input: React.FC<InputProps> = ({ id, label, value, type, onChange, error }
 
   const inputStyles = `${error ? 'border-red-500' : 'border-neutral-400'} w-full py-3 px-2 font-normal text-neutral-400 bg-transparent border-b focus:outline-none focus:border-white`;
 
+  const commonInputProps = {
+    id,
+    value,
+    onChange,
+    onFocus: handleFocus,
+    onBlur: handleBlur,
+    className: inputStyles,
+  };
+
   return (
     <div className="relative w-full">
       <label
@@ -28,29 +37,14 @@ const Input: React.FC<InputProps> = ({ id, label, value, type, onChange, error }
         {label}
       </label>
       {type === 'textarea' ? (
-        <textarea
-          id={id}
-          value={value}
-          onChange={onChange}
-          onFocus={handleFocus}
-          onBlur={handleBlur}
-          className={inputStyles}
-        />
+        <textarea {...commonInputProps} />
       ) : (
-        <input
-          id={id}
-          type={type}
-          value={value}
-          onChange={onChange}
-          onFocus={handleFocus}
-          onBlur={handleBlur}
-          className={inputStyles}
-        />
+        <input type={type} {...commonInputProps} />
       )}
       {error && (
         <p className="mt-2 text-sm text-red-600 dark:text-red-500 flex items-center space-x-1">
           <button><AiOutlineWarning className="text-lg" /></button>
-          <span>Preencha este campo!</span>
+          <span>Preencha o campo!</span>
         </p>
       )}
     </div>

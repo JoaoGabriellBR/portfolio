@@ -12,12 +12,20 @@ const Form = () => {
 
   const handleChangeEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
-    setEmailError(false);
+    if (!email) {
+      setEmailError(true);
+    } else {
+      setEmailError(false);
+    }
   };
 
   const handleChangeMessage = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setMessage(e.target.value);
-    setMessageError(false);
+    if (!message) {
+      setMessageError(true);
+    } else {
+      setMessageError(false)
+    }
   };
 
   const handleErrorMessage = () => {
