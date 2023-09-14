@@ -4,6 +4,7 @@ import AboutMe from '@/components/Sections/AboutMe';
 import Skills from '@/components/Sections/Skills';
 import Qualifications from '@/components/Sections/Qualifications';
 import Projects from '@/components/Sections/Projects';
+import Services from '@/components/Sections/Services';
 import Contact from '@/components/Sections/Contact';
 import Footer from '@/components/Sections/Footer';
 
@@ -19,6 +20,7 @@ const Home = () => {
         <Skills />
         <Qualifications />
         <Projects />
+        <Services/>
         <Contact />
         <Footer />
       </div>

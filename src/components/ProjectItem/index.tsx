@@ -38,12 +38,12 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
     >
       {isHovered && (
         <div className="w-full flex flex-row justify-end items-center space-x-3">
-          <Link href={String(project.repository)}>
+          <Link href={String(project.repository)} target="blank">
             <button>
               <VscGithub className={iconStyle} />
             </button>
           </Link>
-          <Link href={String(project.site)}>
+          <Link href={String(project.site)} target="blank">
             <button>
               <GoLinkExternal className={iconStyle} />
             </button>
