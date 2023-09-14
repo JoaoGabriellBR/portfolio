@@ -17,7 +17,6 @@ const Header = () => {
     return (
         <header className="pt-7 w-full">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-row justify-between items-center">
-                
                 <Link href="/">
                     <Image
                         className="hover:opacity-80"
@@ -27,24 +26,12 @@ const Header = () => {
                         height={40}
                     />
                 </Link>
-
                 <div>
                     <button onClick={openMenu}>
                         <HiMenuAlt1 className="cursor-pointer text-[2rem] text-white" />
                     </button>
                     <Navigation isOpen={isMenuOpen} closeMenu={closeMenu} />
                 </div>
-
-                {/* <div>
-                    <button
-                        className="text-2xl focus:outline-none"
-                        onClick={toggleMenu}
-                    >
-                        &#9776;
-                    </button>
-                    <Navigation isOpen={isMenuOpen} onClose={toggleMenu} />
-                </div> */}
-
             </div>
         </header>
     )

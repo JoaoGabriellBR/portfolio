@@ -9,7 +9,7 @@ const Jumbotron = () => {
   const titleStyle = "font-extrabold text-5xl md:text-8xl ml-0 md:ml-[10rem]";
 
   return (
-    <section className="w-full">
+    <section id="home" className="w-full">
       <div className="max-w-6xl h-screen mx-auto px-4 sm:px-6 pb-[10rem] flex flex-col justify-center items-center md:items-start text-center md:text-start space-y-5">
         <p className="text-neutral-400 font-black ml-0 md:ml-[10rem] tracking-[.15rem]">
           JOÃO GABRIEL SILVA

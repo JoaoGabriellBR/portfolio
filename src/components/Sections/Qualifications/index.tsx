@@ -10,7 +10,7 @@ const Qualifications = () => {
   const [isSelected, setIsSelected] = useState<string>('Experiência');
 
   return (
-    <section className="w-full">
+    <section id="qualificações" className="w-full">
       <div className="max-w-6xl mx-auto space-y-10 px-4 sm:px-6">
 
         <div className="text-center">
