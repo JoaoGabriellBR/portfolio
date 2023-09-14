@@ -4,11 +4,13 @@ import Footer from '@/components/Sections/Footer';
 
 const Contact = () => {
   return (
-    <main className="flex flex-col overflow-hidden min-h-screen">
+    <>
+      <main className="flex flex-col overflow-hidden min-h-screen">
         <Header />
-        <Form/>
-        <Footer/>
-    </main>
+        <Form />
+        <Footer />
+      </main>
+    </>
   )
 }
 

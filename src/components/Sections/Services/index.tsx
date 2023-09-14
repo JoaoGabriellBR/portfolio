@@ -1,10 +1,26 @@
 import { BsFillDatabaseFill } from "react-icons/bs";
 import { SiAltiumdesigner } from "react-icons/si";
 import { MdOutlineSettingsEthernet } from "react-icons/md";
+import ServiceItem from "@/components/ServiceItem";
 
 const Services = () => {
   const iconStyle =
     "w-16 h-16 mb-4 hover:scale-125 transition duration-500 ease-in-out";
+
+  const serviceData = [
+    {
+      icon: <SiAltiumdesigner className={iconStyle} />,
+      services: ["UI/UX Design", "Mobile App Design", "Responsive Design"],
+    },
+    {
+      icon: <MdOutlineSettingsEthernet className={iconStyle} />,
+      services: ["Landing Pages", "Mobile App Design", "Responsive Design"],
+    },
+    {
+      icon: <BsFillDatabaseFill className={iconStyle} />,
+      services: ["Modelagem de banco de dados", "Mobile App Design", "Responsive Design"],
+    },
+  ];
 
   return (
     <section className="py-7 w-full">
@@ -15,35 +31,9 @@ const Services = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 grid-rows-1 gap-4 space-y-5 md:space-y-0">
-          {/* ITEM 1 */}
-          <div className="flex flex-col justify-center items-center text-center">
-            <button>
-              <SiAltiumdesigner className={iconStyle} />
-            </button>
-            <h1>UI/UX Design</h1>
-            <h1>Mobile App Design</h1>
-            <h1>Responsive Design</h1>
-          </div>
-
-          {/* ITEM 1 */}
-          <div className="flex flex-col justify-center items-center text-center">
-            <button>
-              <MdOutlineSettingsEthernet className={iconStyle} />{" "}
-            </button>
-            <h1>Landing Pages</h1>
-            <h1>Mobile App Design</h1>
-            <h1>Responsive Design</h1>
-          </div>
-
-          {/* ITEM 1 */}
-          <div className="flex flex-col justify-center items-center text-center">
-            <button>
-              <BsFillDatabaseFill className={iconStyle} />
-            </button>
-            <h1>Modelagem de banco de dados</h1>
-            <h1>Mobile App Design</h1>
-            <h1>Responsive Design</h1>
-          </div>
+          {serviceData.map((item, index) => (
+            <ServiceItem key={index} {...item} />
+          ))}
         </div>
       </div>
     </section>
