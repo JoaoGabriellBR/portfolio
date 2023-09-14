@@ -8,11 +8,11 @@ const iconStyle =
 export const serviceData = [
   {
     icon: <SiAltiumdesigner className={iconStyle} />,
-    services: ["UI/UX Design", "Mobile App Design", "Responsive Design"],
+    services: ["Design Responsivo", "Integração de design", "Prototipagem"],
   },
   {
     icon: <MdOutlineSettingsEthernet className={iconStyle} />,
-    services: ["Landing Pages", "Mobile App Design", "Responsive Design"],
+    services: ["Landing Pages", "Sites Profissionais", "Blogs e e-commerces"],
   },
   {
     icon: <BsFillDatabaseFill className={iconStyle} />,

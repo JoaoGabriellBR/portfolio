@@ -7,10 +7,9 @@ const Contact = () => {
     <section id="contato" className="py-7 w-full">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-20 bg-neutral-900 rounded-0 md:rounded-[3rem]">
         <div className="flex flex-col justify-center items-center text-center space-y-5 px-0 md:px-32">
-          <h1 className="text-4xl font-bold">VAMOS CONSTRUIR ALGO JUNTOS?</h1>
+          <h1 className="text-4xl font-bold"> VAMOS CRIAR ALGO INCRÍVEL JUNTOS?</h1>
           <p className="text-neutral-400 text-md">
-            Se você tem algum projeto em mente, ou apenas quer bater um papo,
-            sinta-se à vontade para me enviar uma mensagem.
+            Se você tem algum projeto em mente, ou deseja apenas bater um papo, sinta-se à vontade para compartilhar suas ideias.
           </p>
           <Link href="/contact">
             <Button>

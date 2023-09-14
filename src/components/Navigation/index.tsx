@@ -44,7 +44,7 @@ const Navigation = ({ isOpen, closeMenu }: PropsNavigation) => {
 
                     <div className='h-full flex flex-col justify-center items-center space-y-5 md:space-y-7'>
                         {sections?.map((section) => (
-                            <Link key={section.id} href={section.id}>
+                            <Link key={section.id} href={`/${section.id}`}>
                                 <h1 onClick={closeMenu} className={sectionStyle}>{section.name}</h1>
                             </Link>
                         ))}
