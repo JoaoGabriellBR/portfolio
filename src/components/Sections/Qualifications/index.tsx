@@ -4,6 +4,7 @@ import { useState } from "react";
 import Timeline from "@/components/Timeline";
 import Button from "@/components/Button";
 import { qualifications } from "@/utils/qualifications";
+import { QualificationIcon } from "@/utils/types";
 
 const Qualifications = () => {
 
@@ -19,7 +20,7 @@ const Qualifications = () => {
         </div>
 
         <div className="w-full flex justify-center items-center space-x-10 cursor-pointer">
-          {qualifications?.map((item: any, index: number) => (
+          {qualifications?.map((item: QualificationIcon, index: number) => (
             <div
               key={index}
               onClick={() => setIsSelected(item.name)}
@@ -32,7 +33,7 @@ const Qualifications = () => {
           ))}
         </div>
 
-        {qualifications?.map((item, index) => item.name === isSelected && (
+        {qualifications?.map((item: QualificationIcon, index: number) => item.name === isSelected && (
           <Timeline key={index} events={item.event} Icon={item.onlyIcon} />
         ))}
 

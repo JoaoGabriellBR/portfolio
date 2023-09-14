@@ -5,19 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { VscGithub } from "react-icons/vsc";
 import { GoLinkExternal } from "react-icons/go";
-
-interface Project {
-  name: string;
-  technologies: string;
-  site: string;
-  repository: string;
-  gradient: string;
-  logo: any;
-}
-
-interface ProjectItemProps {
-  project: Project;
-}
+import { ProjectItemProps } from "@/utils/types";
 
 const ProjectItem = ({ project }: ProjectItemProps) => {
 
@@ -31,8 +19,7 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
       onMouseEnter={() => handleChange(true)}
       onMouseLeave={() => handleChange(false)}
       className={`
-        ${
-          isHovered && "border-solid border-2 border-white"
+        ${isHovered && "border-solid border-2 border-white"
         } bg-jumbotron bg-no-repeat bg-cover bg-center bg-fixed 
         h-[22rem] p-5 rounded-lg flex flex-col items-center justify-between transition duration-500 ease-in-out`}
     >

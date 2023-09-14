@@ -1,12 +1,6 @@
-"use client";
-
-import { useState } from "react";
-import Button from "@/components/Button";
-import { FiDownload } from "react-icons/fi";
-
 const Jumbotron = () => {
-  const [isMouseOn, setIsMouseOn] = useState(false);
-  const titleStyle = "font-extrabold text-5xl md:text-8xl ml-0 md:ml-[10rem]";
+  
+  const titleStyle = "font-extrabold text-5xl md:text-6x1 lg:text-8xl ml-0 md:ml-[10rem]";
 
   return (
     <section id="home" className="w-full">
@@ -16,10 +10,6 @@ const Jumbotron = () => {
         </p>
         <h1 className={titleStyle}>Desenvolvedor</h1>
         <h1 className={titleStyle}>Full Stack</h1>
-        {/* <Button type={!isMouseOn && "outline"} onMouseEnter={() => setIsMouseOn(true)} onMouseLeave={() => setIsMouseOn(false)}>
-                    Currículo
-                    <FiDownload className="ml-2 w-[1.2rem] h-[1.2rem] font-bold"/>
-                </Button> */}
       </div>
     </section>
   );

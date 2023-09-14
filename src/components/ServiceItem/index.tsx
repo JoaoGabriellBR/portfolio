@@ -1,7 +1,4 @@
-type ServiceItemProps = {
-    icon: React.ReactNode;
-    services: string[];
-};
+import { ServiceItemProps } from "@/utils/types";
 
 const ServiceItem = ({ icon, services }: ServiceItemProps) => (
     <div className="flex flex-col justify-center items-center text-center">
