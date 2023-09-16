@@ -13,7 +13,7 @@ const SocialMedias = () => {
     const gitHub = "https://github.com/JoaoGabriellBR";
 
     return (
-        <nav className="flex flex-row justify-between items-center mt-5 md:mt-0">
+        <nav className="w-[10rem] flex flex-row justify-between items-center mt-5 md:mt-0">
             <Link href={email}>
                 <div className={divIconsStyle}>
                     <MdEmail className={iconsStyle} />

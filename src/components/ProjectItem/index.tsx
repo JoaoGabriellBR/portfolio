@@ -18,9 +18,7 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
     <div
       onMouseEnter={() => handleChange(true)}
       onMouseLeave={() => handleChange(false)}
-      className={`
-        ${isHovered && "border-solid border-2 border-white"
-        } bg-jumbotron bg-no-repeat bg-cover bg-center bg-fixed 
+      className={`bg-jumbotron bg-no-repeat bg-cover bg-center bg-fixed 
         h-[22rem] p-5 rounded-lg flex flex-col items-center justify-between transition duration-500 ease-in-out`}
     >
       {isHovered && (
