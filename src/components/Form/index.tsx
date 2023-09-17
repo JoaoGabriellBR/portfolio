@@ -57,7 +57,6 @@ const Form = () => {
     <>
       <section className="py-20 w-full space-y-[5rem] md:space-y-[10rem]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col justify-center items-center">
-          <p className="self-start">Voltar</p>
           <form className="w-full md:w-6/12 space-y-10 flex flex-col justify-start items-start">
             <h1 className="text-[2rem]">Diga Olá! 👋</h1>
 

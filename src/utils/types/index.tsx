@@ -10,7 +10,7 @@ export interface JobEvent {
     date: string;
     title: string;
     occupation: string;
-    description: string;
+    description: string | JSX.Element;
 }
 
 export interface EducationEvent {
