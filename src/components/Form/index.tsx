@@ -6,6 +6,7 @@ import Input from "@/components/Input";
 import Button from "@/components/Button";
 import emailjs from "@emailjs/browser";
 import { MdSend } from "react-icons/md";
+import { toast } from "react-toastify";
 
 const Form = () => {
   const [formData, setFormData] = useState<FormDataType>({
@@ -55,6 +56,12 @@ const Form = () => {
   const sendEmail = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    // const commonToastProps = {
+    //   position: toast.POSITION.TOP_RIGHT,
+    //   theme: "colored",
+    //   autoClose: 3000,
+    // };
+
     if (!formData.name || !formData.email || !formData.message) {
       setFormErrors({
         name: !formData.name,
@@ -70,9 +77,17 @@ const Form = () => {
         String(process.env.NEXT_PUBLIC_TEMPLATE_ID),
         formData
       );
-      alert("Email enviado com sucesso.");
+      toast.success("Mensagem enviada com sucesso.", {
+        position: toast.POSITION.TOP_RIGHT,
+        theme: "colored",
+        autoClose: 3000,
+      });
     } catch (error) {
-      alert("Não foi possível enviar a mensagem.");
+      toast.error("Não foi possível enviar a mensagem.", {
+        position: toast.POSITION.TOP_RIGHT,
+        theme: "colored",
+        autoClose: 3000,
+      });
     } finally {
       handleClearForm();
     }
