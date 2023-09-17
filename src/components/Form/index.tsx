@@ -1,141 +1,112 @@
-"use client"
-import { useState, useEffect } from "react";
+"use client";
+import { useState, useEffect, FormEvent, ChangeEvent } from "react";
+import { FormDataType, FormErrorsType } from "@/utils/types";
+import { inputFields } from "@/utils/form";
 import Input from "@/components/Input";
-import Button from "../Button";
+import Button from "@/components/Button";
+import emailjs from "@emailjs/browser";
 import { MdSend } from "react-icons/md";
-import emailjs from '@emailjs/browser';
 
 const Form = () => {
-  const [name, setName] = useState<string>('');
-  const [email, setEmail] = useState<string>('');
-  const [message, setMessage] = useState<string>('');
+  const [formData, setFormData] = useState<FormDataType>({
+    name: "",
+    email: "",
+    message: "",
+  });
 
-  const [nameError, setNameError] = useState<boolean>(false);
-  const [emailError, setEmailError] = useState<boolean>(false);
-  const [messageError, setMessageError] = useState<boolean>(false);
+  const [formErrors, setFormErrors] = useState<FormErrorsType>({
+    name: false,
+    email: false,
+    message: false,
+  });
 
+  useEffect(() => {
+    const publicKey = process.env.NEXT_PUBLIC_KEY_PUBLIC;
+    emailjs.init(String(publicKey));
+  }, []);
 
-  const handleChangeName = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setName(e.target.value);
-    if (!name) {
-      setNameError(true);
-    } else {
-      setNameError(false);
-    }
-  };
-
-  const handleChangeEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setEmail(e.target.value);
-    if (!email) {
-      setEmailError(true);
-    } else {
-      setEmailError(false);
-    }
-  };
-
-  const handleChangeMessage = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setMessage(e.target.value);
-    if (!message) {
-      setMessageError(true);
-    } else {
-      setMessageError(false)
-    }
-  };
-
-  const handleErrorMessage = () => {
-    !email ? setEmailError(true) : setEmailError(false);
-    !message ? setMessageError(true) : setMessageError(false);
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+    setFormErrors({
+      ...formErrors,
+      [name]: !value,
+    });
   };
 
   const handleClearForm = () => {
-    setName("");
-    setEmail("");
-    setMessage("");
-    setNameError(false);
-    setEmailError(false);
-    setMessageError(false);
+    setFormData({
+      name: "",
+      email: "",
+      message: "",
+    });
+    setFormErrors({
+      name: false,
+      email: false,
+      message: false,
+    });
   };
 
-  const publicKey = process.env.PUBLIC_KEY;
-  useEffect(() => emailjs.init(String(publicKey)), []);
-
-  const sendEmail = async (e: any) => {
+  const sendEmail = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    try {
-      const serviceId = process.env.SERVICE_ID;
-      const templateId = process.env.TEMPLATE;
 
-      await emailjs.send(String(serviceId), String(templateId), {
-        name: name,
-        email: email,
-        message: message,
+    if (!formData.name || !formData.email || !formData.message) {
+      setFormErrors({
+        name: !formData.name,
+        email: !formData.email,
+        message: !formData.message,
       });
+      return;
+    }
 
-      handleClearForm();
+    try {
+      await emailjs.send(
+        String(process.env.NEXT_PUBLIC_SERVICE_ID),
+        String(process.env.NEXT_PUBLIC_TEMPLATE_ID),
+        formData
+      );
       alert("Email enviado com sucesso.");
     } catch (error) {
       alert("Não foi possível enviar a mensagem.");
+    } finally {
+      handleClearForm();
     }
   };
 
-  const inputValue = [
-    {
-      id: "name",
-      label: "Seu Nome",
-      value: name,
-      onChange: handleChangeName,
-      type: "text",
-      error: nameError,
-    },
-    {
-      id: "email",
-      label: "Seu Email",
-      value: email,
-      onChange: handleChangeEmail,
-      type: "email",
-      error: emailError,
-    },
-    {
-      id: "message",
-      label: "Sua mensagem",
-      value: message,
-      onChange: handleChangeMessage,
-      type: "textarea",
-      error: messageError,
-    },
-  ];
-
   return (
-    <>
-      <section className="py-20 w-full space-y-[5rem] md:space-y-[10rem]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col justify-center items-center">
-          <form onSubmit={sendEmail} className="w-full md:w-6/12 space-y-10 flex flex-col justify-start items-start">
-            <h1 className="text-[2rem]">Diga Olá! 👋</h1>
+    <section className="py-20 w-full space-y-[5rem] md:space-y-[10rem]">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col justify-center items-center">
+        <form
+          onSubmit={sendEmail}
+          className="w-full md:w-6/12 space-y-10 flex flex-col justify-start items-start"
+        >
+          <h1 className="text-[2rem]">Diga Olá! 👋</h1>
 
-            {inputValue?.map((input) => (
-              <Input
-                key={input.id}
-                id={input.id}
-                label={input.label}
-                value={input.value}
-                type={input.type}
-                onChange={input.onChange}
-                error={input.error}
-              />
-            ))}
+          {inputFields.map((input) => (
+            <Input
+              key={input.id}
+              id={input.id}
+              label={input.label}
+              type={input.type}
+              value={formData[input.id as keyof FormDataType]}
+              onChange={handleChange}
+              error={formErrors[input.id as keyof FormErrorsType]}
+            />
+          ))}
 
-            <Button type="submit" onClick={(e) => {
-              handleErrorMessage();
-            }}>
-              <MdSend className="mr-2 w-[1.2rem] h-[1.2rem] font-bold" />
-              Enviar mensagem
-            </Button>
-          </form>
-        </div>
-      </section>
-    </>
+          <Button type="submit">
+            <MdSend className="mr-2 w-[1.2rem] h-[1.2rem] font-bold" />
+            Enviar mensagem
+          </Button>
+        </form>
+      </div>
+    </section>
   );
 };
 
 export default Form;
-

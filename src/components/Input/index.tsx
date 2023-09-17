@@ -1,26 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { AiOutlineWarning } from "react-icons/ai";
+import { InputProps } from "@/utils/types";
 
-interface InputProps {
-  id: string;
-  label: string;
-  value: string;
-  type: string;
-  onChange: (e: any) => void;
-  error: boolean;
-}
-
-const Input: React.FC<InputProps> = ({ id, label, value, type, onChange, error }) => {
+const Input: React.FC<InputProps> = ({
+  id,
+  label,
+  type,
+  value,
+  onChange,
+  error,
+}) => {
   const [isFocused, setIsFocused] = useState<boolean>(false);
 
   const handleFocus = () => setIsFocused(true);
   const handleBlur = () => setIsFocused(false);
 
-  const inputStyles = `${error ? 'border-red-500' : 'border-neutral-400'} w-full py-3 px-2 font-normal text-neutral-400 bg-transparent border-b focus:outline-none focus:border-white`;
+  const inputStyles = `${
+    error ? "border-red-500" : "border-neutral-400"
+  } w-full py-3 px-2 font-normal text-neutral-400 bg-transparent border-b focus:outline-none focus:border-white`;
 
   const commonInputProps = {
     id,
-    value,
+    name: id,
     onChange,
     onFocus: handleFocus,
     onBlur: handleBlur,
@@ -30,20 +31,25 @@ const Input: React.FC<InputProps> = ({ id, label, value, type, onChange, error }
   return (
     <div className="relative w-full">
       <label
-        className={`absolute top-0 left-2 transition-transform ${isFocused || value ? '-translate-y-4 text-sm text-white' : 'translate-y-2 text-base text-neutral-400'
-          }`}
+        className={`absolute top-0 left-2 transition-transform ${
+          isFocused || value
+            ? "-translate-y-4 text-sm text-white"
+            : "translate-y-2 text-base text-neutral-400"
+        }`}
         htmlFor={id}
       >
         {label}
       </label>
-      {type === 'textarea' ? (
+      {type === "textarea" ? (
         <textarea {...commonInputProps} />
       ) : (
         <input type={type} {...commonInputProps} />
       )}
       {error && (
         <p className="mt-2 text-sm text-red-600 dark:text-red-500 flex items-center space-x-1">
-          <button><AiOutlineWarning className="text-lg" /></button>
+          <button>
+            <AiOutlineWarning className="text-lg" />
+          </button>
           <span>Preencha o campo!</span>
         </p>
       )}
