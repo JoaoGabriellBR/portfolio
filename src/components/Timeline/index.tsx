@@ -1,4 +1,6 @@
-const Timeline = ({ events, Icon }: any) => {
+import { JobEvent, EducationEvent, PropsTimeline } from "@/utils/types";
+
+const Timeline = ({ events, Icon }: PropsTimeline) => {
 
   const divMainStyle = "space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent";
   const divItemStyle = "relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active";
@@ -13,14 +15,12 @@ const Timeline = ({ events, Icon }: any) => {
 
   return (
     <>
-      <div className={divMainStyle}>
-        {events.map((item: any, index: number) => (
+      <div data-aos="fade-right" className={divMainStyle}>
+        {events?.map((item: JobEvent | EducationEvent, index: number) => (
           <div key={index} className={divItemStyle}>
-            {/* Icon */}
             <div className={divIconStyle}>
               <Icon className={iconStyle} />
             </div>
-            {/* <!-- Card --> */}
             <div className={divCardStyle}>
               <div className={divTitle}>
                 <h1 className={titleStyle}>{item.title}</h1>

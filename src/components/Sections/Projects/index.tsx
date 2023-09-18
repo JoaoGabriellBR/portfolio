@@ -2,14 +2,15 @@
 
 import ProjectItem from "@/components/ProjectItem";
 import { projects } from "@/utils/projects";
+import { ProjectProps } from "@/utils/types";
 
 const Projects = () => {
   return (
-    <section className="py-7 w-full">
+    <section id="projetos" className="py-7 w-full">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 space-y-10">
-        <h1 className="text-[1.5rem] text-center font-bold">Projetos</h1>
+        <h1 data-aos="fade-right" className="text-[1.5rem] text-center font-bold">Projetos</h1>
         <div className="grid grid-cols-1 md:grid-cols-3 grid-rows-1 gap-4">
-          {projects?.map((project: any, index: number) => (
+          {projects?.map((project: ProjectProps, index: number) => (
             <ProjectItem
               key={index}
               project={project}
