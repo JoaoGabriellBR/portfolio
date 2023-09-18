@@ -15,7 +15,7 @@ import "aos/dist/aos.css";
 const Home = () => {
   useEffect(() => {
     AOS.init({
-      once: true,
+      once: false,
       disable: "phone",
       duration: 700,
       easing: "ease-out-sine",

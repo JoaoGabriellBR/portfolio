@@ -4,9 +4,8 @@ import SocialMedias from "@/components/SocialMedias";
 import picture from "@/assets/foto.png";
 
 const AboutMe = () => {
-
   const email = "mailto:joaoname9@gmail.com";
-  const phone = "34998819318";
+  const phone = "tel:+5534998819318";
   const titleStyles = "font-bold text-[1.5rem]";
   const contacts = {
     p: "text-neutral-400",
@@ -24,7 +23,7 @@ const AboutMe = () => {
         <div data-aos="fade-left" className="flex flex-col items-center md:items-start w-full space-y-5 text-center md:text-start col-span-2">
           <h1 className={titleStyles}>Sobre mim</h1>
           <p className="text-neutral-400">
-          Olá, sou João Gabriel, e meu interesse pelo desenvolvimento web começou em 2021, durante o curso programador javaScript da OneBitCode. Em 2022, iniciei como estagiário full stack na Seguradora Split Risk, aplicando meus conhecimentos em projetos reais. Hoje, continuo focado no aprendizado, acompanhando as tecnologias e tendências do mercado.
+            Olá, sou João Gabriel, e meu interesse pelo desenvolvimento web começou em 2021, durante o curso programador javaScript da OneBitCode. Em 2022, iniciei como estagiário full stack na Seguradora Split Risk, aplicando meus conhecimentos em projetos reais. Hoje, continuo focado no aprendizado, acompanhando as tecnologias e tendências do mercado.
           </p>
 
           <SocialMedias />
