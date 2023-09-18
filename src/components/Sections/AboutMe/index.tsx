@@ -17,11 +17,11 @@ const AboutMe = () => {
     <section id="sobremim" className="pt-32 w-full">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-4 grid-rows-1">
 
-        <div className="hidden md:flex justify-center col-span-2">
+        <div data-aos="fade-right" className="hidden md:flex justify-center col-span-2">
           <Image src={picture} alt="Logo João Gabriel Silva" layout="contain" />
         </div>
 
-        <div className="flex flex-col items-center md:items-start w-full space-y-5 text-center md:text-start col-span-2">
+        <div data-aos="fade-left" className="flex flex-col items-center md:items-start w-full space-y-5 text-center md:text-start col-span-2">
           <h1 className={titleStyles}>Sobre mim</h1>
           <p className="text-neutral-400">
           Olá, sou João Gabriel, e meu interesse pelo desenvolvimento web começou em 2021, durante o curso programador javaScript da OneBitCode. Em 2022, iniciei como estagiário full stack na Seguradora Split Risk, aplicando meus conhecimentos em projetos reais. Hoje, continuo focado no aprendizado, acompanhando as tecnologias e tendências do mercado.

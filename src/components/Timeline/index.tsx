@@ -15,7 +15,7 @@ const Timeline = ({ events, Icon }: PropsTimeline) => {
 
   return (
     <>
-      <div className={divMainStyle}>
+      <div data-aos="fade-right" className={divMainStyle}>
         {events?.map((item: JobEvent | EducationEvent, index: number) => (
           <div key={index} className={divItemStyle}>
             <div className={divIconStyle}>

@@ -56,12 +56,6 @@ const Form = () => {
   const sendEmail = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // const commonToastProps = {
-    //   position: toast.POSITION.TOP_RIGHT,
-    //   theme: "colored",
-    //   autoClose: 3000,
-    // };
-
     if (!formData.name || !formData.email || !formData.message) {
       setFormErrors({
         name: !formData.name,
@@ -94,7 +88,7 @@ const Form = () => {
   };
 
   return (
-    <section className="py-20 w-full space-y-[5rem] md:space-y-[10rem]">
+    <section data-aos="fade-right" className="py-20 w-full space-y-[5rem] md:space-y-[10rem]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col justify-center items-center">
         <form
           onSubmit={sendEmail}

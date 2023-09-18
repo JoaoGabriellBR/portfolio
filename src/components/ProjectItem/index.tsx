@@ -37,6 +37,7 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
       )}
 
       <div
+        data-aos="zoom-out"
         className={`w-full h-full flex flex-col justify-center items-center`}
       >
         <Image
