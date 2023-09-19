@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect, FormEvent, ChangeEvent } from "react";
 import { FormDataType, FormErrorsType } from "@/utils/types";
-// import { inputFields } from "@/utils/form";
+import { inputFields } from "@/utils/form";
 import Input from "@/components/Input";
 import Button from "@/components/Button";
 import emailjs from "@emailjs/browser";
@@ -26,18 +26,10 @@ const Form = () => {
     emailjs.init(String(publicKey));
   }, []);
 
-  const handleChangeName = (e: ChangeEvent<HTMLInputElement>) => {
-    setFormData({ ...formData, name: e.target.value })
-  }
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>, field: keyof FormDataType) => {
+    setFormData({ ...formData, [field]: e.target.value });
+  };
 
-  const handleChangeEmail = (e: ChangeEvent<HTMLInputElement>) => {
-    setFormData({ ...formData, email: e.target.value })
-  }
-
-  const handleChangeMessage = (e: ChangeEvent<HTMLTextAreaElement>) => {
-    setFormData({ ...formData, message: e.target.value })
-  }
- 
   const handleClearForm = () => {
     setFormData({
       ...formData,
@@ -87,27 +79,6 @@ const Form = () => {
     }
   };
 
-  const inputFields = [
-    {
-      id: "name",
-      label: "Seu Nome",
-      type: "text",
-      onChange: handleChangeName
-    },
-    {
-      id: "email",
-      label: "Seu Email",
-      type: "email",
-      onChange: handleChangeEmail
-    },
-    {
-      id: "message",
-      label: "Sua mensagem",
-      type: "textarea",
-      onChange: handleChangeMessage
-    },
-  ];
-
   return (
     <section data-aos="fade-right" className="py-20 w-full space-y-[5rem] md:space-y-[10rem]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col justify-center items-center">
@@ -116,7 +87,6 @@ const Form = () => {
           className="w-full md:w-6/12 space-y-10 flex flex-col justify-start items-start"
         >
           <h1 className="text-[2rem]">Diga Olá! 👋</h1>
-
           {inputFields.map((input) => (
             <Input
               key={input.id}
@@ -124,18 +94,15 @@ const Form = () => {
               label={input.label}
               type={input.type}
               value={formData[input.id as keyof FormDataType]}
-              onChange={input.onChange}
+              onChange={(e) => handleChange(e, input.id as keyof FormDataType)}
               error={formErrors[input.id as keyof FormErrorsType]}
             />
           ))}
-
           <Button type="submit">
             <MdSend className="mr-2 w-[1.2rem] h-[1.2rem] font-bold" />
             Enviar mensagem
           </Button>
-
         </form>
-          <button onClick={handleClearForm}>limpar</button>
       </div>
     </section>
   );
