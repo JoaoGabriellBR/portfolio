@@ -26,27 +26,19 @@ const Form = () => {
     emailjs.init(String(publicKey));
   }, []);
 
-  const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-    setFormErrors({
-      ...formErrors,
-      [name]: !value,
-    });
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>, field: keyof FormDataType) => {
+    setFormData({ ...formData, [field]: e.target.value });
   };
 
   const handleClearForm = () => {
     setFormData({
+      ...formData,
       name: "",
       email: "",
       message: "",
     });
     setFormErrors({
+      ...formErrors,
       name: false,
       email: false,
       message: false,
@@ -95,7 +87,6 @@ const Form = () => {
           className="w-full md:w-6/12 space-y-10 flex flex-col justify-start items-start"
         >
           <h1 className="text-[2rem]">Diga Olá! 👋</h1>
-
           {inputFields.map((input) => (
             <Input
               key={input.id}
@@ -103,11 +94,10 @@ const Form = () => {
               label={input.label}
               type={input.type}
               value={formData[input.id as keyof FormDataType]}
-              onChange={handleChange}
+              onChange={(e) => handleChange(e, input.id as keyof FormDataType)}
               error={formErrors[input.id as keyof FormErrorsType]}
             />
           ))}
-
           <Button type="submit">
             <MdSend className="mr-2 w-[1.2rem] h-[1.2rem] font-bold" />
             Enviar mensagem
