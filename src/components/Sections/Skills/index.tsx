@@ -2,10 +2,10 @@ import Link from "next/link";
 import { GrMysql } from "react-icons/gr";
 import { FaReact, FaNodeJs, FaSass } from "react-icons/fa";
 import { SiNextdotjs, SiTailwindcss, SiPrisma } from "react-icons/si";
+import { RiJavascriptFill } from "react-icons/ri";
 import {
   BiLogoPostgresql,
   BiLogoTypescript,
-  BiLogoJavascript,
 } from "react-icons/bi";
 
 const Skills = () => {
@@ -40,7 +40,7 @@ const Skills = () => {
     {
       name: "JavaScript",
       color: "hover:text-javascript",
-      icon: <BiLogoJavascript className={iconStyle} />,
+      icon: <RiJavascriptFill className={iconStyle} />,
       site: "https://developer.mozilla.org/pt-BR/docs/Web/JavaScript",
     },
     {
