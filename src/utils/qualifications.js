@@ -1,7 +1,7 @@
 import { PiStudentBold } from "react-icons/pi";
 import { CgWorkAlt } from "react-icons/cg";
 
-export const iconStyle = "w-6 h-6";
+export const iconStyle = "w-[1.2rem] h-[1.2rem] mr-2";
 
 export const job = [
   {
@@ -12,7 +12,7 @@ export const job = [
       <>
         Auxilio no desenvolvimento e suporte dos sistemas da empresa, utilizando
         tecnologias como{" "}
-        <span className="text-white">React, Node, Prisma ORM e MySQL.</span>{" "}
+        <span className="text-white">React, Node, TypeScript, Prisma ORM e MySQL.</span>{" "}
         Minhas responsabilidades incluem a resolução ágil de problemas, correção
         de bugs e aprimoramento contínuo das aplicações web da companhia.
       </>

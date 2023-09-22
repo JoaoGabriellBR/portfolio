@@ -24,7 +24,7 @@ const Qualifications = () => {
             <div
               key={index}
               onClick={() => setIsSelected(item.name)}
-              className={`flex flex-row justify-center items-center space-x-1`}
+              className={`flex flex-row justify-center items-center`}
             >
               <Button outline={isSelected !== item.name}>
                 {item.icon} {item.name}

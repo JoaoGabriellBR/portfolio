@@ -23,7 +23,9 @@ const AboutMe = () => {
         <div data-aos="fade-left" className="flex flex-col items-center md:items-start w-full space-y-5 text-center md:text-start col-span-2">
           <h1 className={titleStyles}>Sobre mim</h1>
           <p className="text-neutral-400">
-            Olá, sou João Gabriel, e meu interesse pelo desenvolvimento web começou em 2021, durante o curso programador javaScript da OneBitCode. Em 2022, iniciei como estagiário full stack na Seguradora Split Risk, aplicando meus conhecimentos em projetos reais. Hoje, continuo focado no aprendizado, acompanhando as tecnologias e tendências do mercado.
+            Olá, sou João Gabriel. Meu interesse pelo desenvolvimento web surgiu em 2021, durante o curso de programação JavaScript da OneBitCode.
+            Em 2022, tive a oportunidade de ingressar no mercado de trabalho atuando como desenvolvedor full stack na empresa Split Risk, onde pude aplicar
+            meus conhecimentos em projetos reais. Atualmente, mantenho meu foco no aprendizado, acompanhando de perto as tecnologias e tendências da área.
           </p>
 
           <SocialMedias />
