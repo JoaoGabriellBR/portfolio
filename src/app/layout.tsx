@@ -1,8 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-import Script from "next/script";
-import Head from "next/head";
+import Analytics from "@/components/Analytics";
 
 const poppins = Poppins({ subsets: ["latin"], weight: "400" });
 
@@ -18,24 +17,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Head>
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`}
-        />
-        <Script id="google-analytics">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-          
-            gtag('config', ${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID});
-        `}
-        </Script>
-      </Head>
       <body
         className={`${poppins.className} bg-neutral-950 text-white tracking-wide`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
