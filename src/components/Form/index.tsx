@@ -9,7 +9,7 @@ import { MdSend } from "react-icons/md";
 import { toast } from "react-toastify";
 
 const Form = () => {
-  const [formData, setFormData] = useState<FormDataType>({
+  const [formData, setFormData] = useState<FormDataType | any>({
     name: "",
     email: "",
     message: "",
