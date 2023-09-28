@@ -12,13 +12,13 @@ export interface InputProps {
   error: boolean;
 }
 
-export type FormDataType = {
+export interface FormDataType {
   name: string;
   email: string;
   message: string;
 };
 
-export type FormErrorsType = {
+export interface FormErrorsType {
   name: boolean;
   email: boolean;
   message: boolean;

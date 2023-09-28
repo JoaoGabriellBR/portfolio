@@ -35,25 +35,25 @@ export const job = [
 
 export const education = [
   {
-    date: "Ago/2021 - atual",
+    date: "Ago/2021 - Atual",
     title: "Uniessa",
     occupation: "Sistemas de Informação",
     description:
       "Curso superior que combina conhecimentos de tecnologia da informação e gestão, fornecendo  habilidades em desenvolvimento de software, análise de dados, resolução de problemas e tomada de decisões.",
   },
   {
-    date: "Fev/2022 - atual",
+    date: "Fev/2022 - Set/2023",
     title: "OneBitCode",
     occupation: "Desenvolvedor Web Full Stack",
     description:
-      "Curso prático que capacita os alunos a dominarem tanto o desenvolvimento front-end quanto o back-end de aplicações web, com ênfase na construção de projetos do mundo real.",
+      "Curso prático centrado na linguagem JavaScript e seus frameworks, onde pude desenvolver a capacidade de criar e implantar projetos web completos, abrangendo  a interface do usuário, o servidor e o banco de dados.",
   },
   {
     date: "Mai/2020 - Mar/2022",
     title: "Microcamp",
     occupation: "Técnico em Hardware e Robótica",
     description:
-      "Curso que proporciona uma sólida formação na área de hardware, abrangendo conhecimentos essenciais em montagem, manutenção e configuração de computadores. Além disso, exploram o mundo da robótica, concedendo habilidades na criação e programação de robôs autônomos.",
+      "Aprendi conhecimentos essenciais em montagem, manutenção e configuração de computadores. Além disso, explorei o mundo da robótica, desenvolvendo habilidades na criação e programação de robôs autônomos.",
   },
 ];
 
