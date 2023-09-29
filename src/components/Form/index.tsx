@@ -6,7 +6,7 @@ import Input from "@/components/Input";
 import Button from "@/components/Button";
 import emailjs from "@emailjs/browser";
 import { MdSend } from "react-icons/md";
-import { toast } from "react-toastify";
+import showToast from "../../utils/showToast";
 
 const Form = () => {
   const [formData, setFormData] = useState<FormDataType | any>({
@@ -28,6 +28,7 @@ const Form = () => {
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>, field: keyof FormDataType) => {
     setFormData({ ...formData, [field]: e.target.value });
+    setFormErrors({ ...formErrors, [field]: false });
   };
 
   const handleClearForm = () => {
@@ -47,7 +48,6 @@ const Form = () => {
 
   const sendEmail = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
     if (!formData.name || !formData.email || !formData.message) {
       setFormErrors({
         name: !formData.name,
@@ -56,24 +56,15 @@ const Form = () => {
       });
       return;
     }
-
     try {
       await emailjs.send(
         String(process.env.NEXT_PUBLIC_SERVICE_ID),
         String(process.env.NEXT_PUBLIC_TEMPLATE_ID),
         formData
       );
-      toast.success("Mensagem enviada com sucesso.", {
-        position: toast.POSITION.TOP_RIGHT,
-        theme: "colored",
-        autoClose: 3000,
-      });
+      showToast("Mensagem enviada com sucesso.", "success");
     } catch (error) {
-      toast.error("Não foi possível enviar a mensagem.", {
-        position: toast.POSITION.TOP_RIGHT,
-        theme: "colored",
-        autoClose: 3000,
-      });
+      showToast("Não foi possível enviar a mensagem.", "error");
     } finally {
       handleClearForm();
     }
