@@ -12,10 +12,7 @@ const Contact = () => {
             Se você tem algum projeto em mente, ou deseja apenas bater um papo, sinta-se à vontade para compartilhar suas ideias.
           </p>
           <Link href="/contact">
-            <Button>
-              Fale comigo
-              <FiSend className="ml-2 w-[1.2rem] h-[1.2rem] font-bold" />
-            </Button>
+             <Button icon={FiSend} iconPosition="right" >Fale comigo</Button>
           </Link>
         </div>
       </div>

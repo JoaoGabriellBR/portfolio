@@ -89,10 +89,7 @@ const Form = () => {
               error={formErrors[input.id as keyof FormErrorsType]}
             />
           ))}
-          <Button type="submit">
-            <MdSend className="mr-2 w-[1.2rem] h-[1.2rem] font-bold" />
-            Enviar mensagem
-          </Button>
+          <Button icon={MdSend}>Enviar Mensagem</Button>
         </form>
       </div>
     </section>

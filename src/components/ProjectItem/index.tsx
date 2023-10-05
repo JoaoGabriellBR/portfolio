@@ -11,7 +11,7 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
   const [isHovered, setIsHovered] = useState<boolean>(false);
 
   const divMain = `relative bg-jumbotron bg-no-repeat bg-cover bg-center bg-fixed 
-  h-[22rem] p-5 hover:p-0 rounded-lg flex flex-col items-center justify-between transition duration-300 ease-in-out`;
+  h-[22rem] p-5 hover:p-0 rounded-lg flex flex-col items-center justify-between transition duration-700 ease-in-out delay-150`;
   const iconStyle = `text-white w-10 h-10 font-bold hover:scale-125 transition duration-300 ease-in-out`;
   const handleChange = (value: boolean) => setIsHovered(value);
 
@@ -33,7 +33,7 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
               </button>
             </Link>
             <Link href={String(project.site)} target="blank">
-              <button>
+              <button> 
                 <GoLinkExternal className={iconStyle} />
               </button>
             </Link>

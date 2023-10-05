@@ -26,6 +26,8 @@ export interface FormErrorsType {
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   outline?: boolean;
+  icon?: React.ElementType;
+  iconPosition?: string;
   children: ReactNode;
 }
 
@@ -46,8 +48,7 @@ export interface EducationEvent {
 export interface QualificationIcon {
   name: string;
   event: JobEvent[] | EducationEvent[];
-  onlyIcon: SVGRectElement;
-  icon: any;
+  icon: SVGRectElement | any;
 }
 
 export interface PropsTimeline {
