@@ -26,15 +26,13 @@ const Qualifications = () => {
               onClick={() => setIsSelected(item.name)}
               className={`flex flex-row justify-center items-center`}
             >
-              <Button outline={isSelected !== item.name}>
-                {item.icon} {item.name}
-              </Button>
+              <Button outline={isSelected !== item.name} icon={item.icon}>{item.name}</Button>
             </div>
           ))}
         </div>
 
         {qualifications?.map((item: QualificationIcon, index: number) => item.name === isSelected && (
-          <Timeline key={index} events={item.event} Icon={item.onlyIcon} />
+          <Timeline key={index} events={item.event} Icon={item.icon} />
         ))}
 
       </div>
