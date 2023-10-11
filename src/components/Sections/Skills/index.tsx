@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { GrMysql } from "react-icons/gr";
 import { FaReact, FaNodeJs, FaSass } from "react-icons/fa";
-import { SiNextdotjs, SiTailwindcss, SiPrisma } from "react-icons/si";
+import { SiPython, SiDjango, SiNextdotjs, SiTailwindcss, SiPrisma } from "react-icons/si";
 import { RiJavascriptFill } from "react-icons/ri";
 import {
   BiLogoPostgresql,
@@ -20,16 +20,28 @@ const Skills = () => {
       site: "https://legacy.reactjs.org",
     },
     {
-      name: "Node",
-      color: "hover:text-node",
-      icon: <FaNodeJs className={iconStyle} />,
-      site: "https://nodejs.org",
-    },
-    {
       name: "Next",
       color: "hover:text-next",
       icon: <SiNextdotjs className={iconStyle} />,
       site: "https://nextjs.org",
+    },
+    {
+      name: "Python",
+      color: "hover:text-python",
+      icon: <SiPython className={iconStyle} />,
+      site: "https://www.python.org",
+    },
+    {
+      name: "Django",
+      color: "hover:text-django",
+      icon: <SiDjango className={iconStyle} />,
+      site: "https://www.djangoproject.com",
+    },
+    {
+      name: "Node",
+      color: "hover:text-node",
+      icon: <FaNodeJs className={iconStyle} />,
+      site: "https://nodejs.org",
     },
     {
       name: "TypeScript",
@@ -83,7 +95,7 @@ const Skills = () => {
           {technologies?.map((tech, index) => (
             <div
               key={index}
-              className="min-w-[12rem] flex flex-col justify-center items-center mb-10"
+              className="min-w-[10rem] flex flex-col justify-center items-center mb-10"
             >
               <Link href={tech.site} target="blank">
                 <button className={`${tech.color}`}>
