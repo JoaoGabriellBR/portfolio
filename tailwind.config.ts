@@ -16,8 +16,10 @@ const config: Config = {
       },
       colors: {
         'react': '#61DBFB',
-        'node': '#6cc24a',
         'next': '#FFF',
+        'python': '#2E688C',
+        'django': '#27AB78',
+        'node': '#6cc24a',
         'typescript': '#3178c6',
         'javascript': '#f0Db4f',
         'tailwind': '#38bdf8',
