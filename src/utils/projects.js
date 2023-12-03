@@ -3,20 +3,20 @@ import worldNews from "@/assets/worldNews.png";
 import solarToy from "@/assets/solarToy.png";
 import reactNotes from "@/assets/reactNotes.png";
 import superMarioGame from "@/assets/superMarioGame.png";
-import superHeroApp from "@/assets/superHeroApp.png"
+import upWrite from "@/assets/upWrite.png";
 
 export const projects = [
+  {
+    name: "UpWrite",
+    site: "https://up-write.vercel.app",
+    repository: "https://github.com/JoaoGabriellBR/UpWrite",
+    logo: upWrite,
+  },
   {
     name: "Finans",
     site: "https://siteappfinans.netlify.app",
     repository: "https://github.com/JoaoGabriellBR/finans",
     logo: finans,
-  },
-  {
-    name: "React Notes",
-    site: "https://sitereactnotes.netlify.app",
-    repository: "https://github.com/JoaoGabriellBR/reactnotes",
-    logo: reactNotes,
   },
   {
     name: "World News",
@@ -37,9 +37,9 @@ export const projects = [
     logo: superMarioGame,
   },
   {
-    name: "Super Hero App",
-    site: "https://super-hero-app-beige.vercel.app",
-    repository: "https://github.com/JoaoGabriellBR/SuperHeroApp",
-    logo: superHeroApp,
+    name: "React Notes",
+    site: "https://sitereactnotes.netlify.app",
+    repository: "https://github.com/JoaoGabriellBR/reactnotes",
+    logo: reactNotes,
   },
 ];
