@@ -71,3 +71,8 @@ export interface ProjectProps {
 export interface ProjectItemProps {
   project: ProjectProps;
 }
+
+export interface PropsNavigation {
+  isOpen: boolean;
+  closeMenu: () => void;
+}
