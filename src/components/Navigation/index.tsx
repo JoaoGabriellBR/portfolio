@@ -4,11 +4,7 @@ import Image from 'next/image';
 import logo from "@/assets/logo.png";
 import { sections } from "@/utils/navigation";
 import { AiOutlineClose } from "react-icons/ai";
-
-type PropsNavigation = {
-    isOpen: boolean;
-    closeMenu: () => void;
-}
+import { PropsNavigation } from '@/utils/types';
 
 const Navigation = ({ isOpen, closeMenu }: PropsNavigation) => {
 
