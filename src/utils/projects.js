@@ -1,9 +1,9 @@
 import finans from "@/assets/finans.png";
 import worldNews from "@/assets/worldNews.png";
 import solarToy from "@/assets/solarToy.png";
-import reactNotes from "@/assets/reactNotes.png";
 import superMarioGame from "@/assets/superMarioGame.png";
 import upWrite from "@/assets/upWrite.png";
+import adidasShopping from "@/assets/adidasShopping.png";
 
 export const projects = [
   {
@@ -11,6 +11,12 @@ export const projects = [
     site: "https://up-write.vercel.app",
     repository: "https://github.com/JoaoGabriellBR/UpWrite",
     logo: upWrite,
+  },
+  {
+    name: "Adidas Shopping",
+    site: "https://adidasshopping.vercel.app",
+    repository: "https://github.com/JoaoGabriellBR/Adidas-shopping",
+    logo: adidasShopping,
   },
   {
     name: "Finans",
@@ -35,11 +41,5 @@ export const projects = [
     site: "https://gamesupermario.netlify.app",
     repository: "https://github.com/JoaoGabriellBR/SuperMarioGame",
     logo: superMarioGame,
-  },
-  {
-    name: "React Notes",
-    site: "https://sitereactnotes.netlify.app",
-    repository: "https://github.com/JoaoGabriellBR/reactnotes",
-    logo: reactNotes,
   },
 ];
