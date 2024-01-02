@@ -27,7 +27,8 @@ export const job = [
         Fornecia assistência técnica aos usuários e colaboradores da empresa,
         utilizando <span className="text-white">Linux Mint.</span> Além disso,
         auxiliava na manutenção preventiva e corretiva dos hardwares, e também
-        colaborava nos processos de garantia através do sistema TOTVS Protheus.
+        colaborava nos processos de garantia através do sistema{" "}
+        <span className="text-white">TOTVS Protheus.</span>
       </>
     ),
   },
