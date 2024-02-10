@@ -76,3 +76,8 @@ export interface PropsNavigation {
   isOpen: boolean;
   closeMenu: () => void;
 }
+
+export interface PropsLogo {
+  size?: string;
+  onClick?: () => void;
+}

@@ -1,10 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
-import logo from "@/assets/logo.png";
 import { sections } from "@/utils/navigation";
 import { AiOutlineClose } from "react-icons/ai";
 import { PropsNavigation } from '@/utils/types';
+import Logo from '../Logo';
 
 const Navigation = ({ isOpen, closeMenu }: PropsNavigation) => {
 
@@ -25,14 +24,7 @@ const Navigation = ({ isOpen, closeMenu }: PropsNavigation) => {
                 <div className="flex flex-col h-full max-w-6xl mx-auto px-4 sm:px-6 pt-7">
 
                     <div className='flex flex-row justify-between items-center'>
-                        <Image
-                            onClick={closeMenu}
-                            className="hover:opacity-80 text-white cursor-pointer"
-                            src={logo}
-                            alt="Logo João Gabriel Silva"
-                            width={40}
-                            height={40}
-                        />
+                        <Logo onClick={closeMenu}/>
                         <button className='cursor-pointer text-[2rem] hover:opacity-80' onClick={closeMenu}>
                             <AiOutlineClose />
                         </button>
