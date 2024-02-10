@@ -15,7 +15,7 @@ const Input: React.FC<InputProps> = ({
   const handleFocus = () => setIsFocused(true);
   const handleBlur = () => setIsFocused(false);
 
-  const inputStyles = `border-${error ? "red-500" : "neutral-400"} w-full py-3 px-2 font-normal text-neutral-400 bg-transparent border-b focus:outline-none focus:border-white`;
+  const inputStyles = `border-${error ? "red-500" : "neutral-400"} w-full py-3 px-2 font-normal text-neutral-400 bg-transparent border-b border-neutral-800 focus:outline-none focus:border-white`;
 
   const commonInputProps = {
     id,
