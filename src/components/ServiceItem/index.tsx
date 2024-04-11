@@ -1,12 +1,14 @@
 import { ServiceItemProps } from "@/utils/types";
 
 const ServiceItem = ({ icon, services }: ServiceItemProps) => (
-    <div className="flex flex-col justify-center items-center text-center">
-        <button>{icon}</button>
-        {services?.map((service, index) => (
-            <p className="text-neutral-400" key={index}>{service}</p>
-        ))}
-    </div>
+  <div className="flex flex-col justify-center items-center text-center">
+    {icon}
+    {services?.map((service, index) => (
+      <p className="text-neutral-400" key={index}>
+        {service}
+      </p>
+    ))}
+  </div>
 );
 
 export default ServiceItem;

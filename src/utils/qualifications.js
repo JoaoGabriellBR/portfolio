@@ -7,15 +7,64 @@ export const job = [
     title: "Split Risk",
     occupation: "Desenvolvedor Full Stack",
     description: (
-      <>
-        Auxilio no desenvolvimento e suporte dos sistemas da empresa, utilizando
-        tecnologias como{" "}
-        <span className="text-white">
-          React, Node, TypeScript, Prisma ORM e MySQL.
-        </span>{" "}
-        Minhas responsabilidades incluem a resolução ágil de problemas, correção
-        de bugs e aprimoramento contínuo das aplicações web da companhia.
-      </>
+      <div>
+        <p>
+          Na Split Risk eu corrijo bugs, implemento novas funcionalidades e
+          presto suporte nos principais sistemas da empresa. Destaco algumas das minhas realizações:
+        </p>
+        <br></br>
+        <p>
+          - Implementação de um{" "}
+          <span className="text-white">sistema de gestão de acessos</span> no
+          portal administrativo, permitindo criação de grupos, bloqueio de
+          páginas e controle de acessos.
+        </p>
+        <p>
+          - Suporte e resolução de chamados no{" "}
+          <span className="text-white">Jira</span>.
+        </p>
+        <p>
+          - Integração com <span className="text-white">APIs de gateway</span>{" "}
+          de pagamento, como Asaas.
+        </p>
+        <p>
+          - Criação de um <span className="text-white">editor WYSIWYG</span>{" "}
+          intuitivo no portal administrativo, usando{" "}
+          <span className="text-white">TinyMCE</span> para facilitar a criação
+          de páginas e otimizar a comunicação interna da equipe de gestão de
+          pessoas.
+        </p>
+      </div>
+    ),
+  },
+  {
+    date: "Set/2022 - Jan/2024",
+    title: "Grupo Gomes Pires",
+    occupation: "Estágio em Desenvolvimento",
+    description: (
+      <div>
+        <p>
+          No GGP eu auxiliava outros desenvolvedores na entrega das sprints
+          estabelecidas. Destaco algumas das minhas contribuições:
+        </p>
+        <br></br>
+        <p>
+          - Suporte na prototipagem de projetos web utilizando{" "}
+          <span className="text-white">Figma</span>.
+        </p>
+        <p>
+          - Desenvolvimento de landing pages de vendas para diversas empresas
+          dentro do grupo, utilizando{" "}
+          <span className="text-white">
+            React, TypeScript, Material UI e CSS-in-JS (Styled-components)
+          </span>
+          .
+        </p>
+        <p>
+          - Criação de quadros <span className="text-white">Scrum</span> no
+          Trello para monitorar e organizar as atividades diárias.
+        </p>
+      </div>
     ),
   },
   {

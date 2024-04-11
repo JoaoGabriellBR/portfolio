@@ -3,7 +3,7 @@ import { SiAltiumdesigner } from "react-icons/si";
 import { MdOutlineSettingsEthernet } from "react-icons/md";
 
 const iconStyle =
-  "w-16 h-16 mb-4 hover:scale-125 transition duration-500 ease-in-out";
+  "w-20 h-20 mb-4 hover:scale-125 transition duration-500 ease-in-out";
 
 export const serviceData = [
   {

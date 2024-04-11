@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { GrMysql } from "react-icons/gr";
-import { FaReact, FaNodeJs, FaSass } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaDocker, FaSass, FaGitAlt } from "react-icons/fa";
 import { SiPython, SiDjango, SiNextdotjs, SiTailwindcss, SiPrisma } from "react-icons/si";
 import { RiJavascriptFill } from "react-icons/ri";
 import {
@@ -10,7 +10,7 @@ import {
 
 const Skills = () => {
   const iconStyle =
-    "w-16 h-16 mb-4 hover:scale-125 transition duration-500 ease-in-out";
+    "w-20 h-20 mb-4 hover:scale-125 transition duration-500 ease-in-out";
 
   const technologies = [
     {
@@ -24,18 +24,6 @@ const Skills = () => {
       color: "hover:text-next",
       icon: <SiNextdotjs className={iconStyle} />,
       site: "https://nextjs.org",
-    },
-    {
-      name: "Python",
-      color: "hover:text-python",
-      icon: <SiPython className={iconStyle} />,
-      site: "https://www.python.org",
-    },
-    {
-      name: "Django",
-      color: "hover:text-django",
-      icon: <SiDjango className={iconStyle} />,
-      site: "https://www.djangoproject.com",
     },
     {
       name: "Node",
@@ -54,6 +42,12 @@ const Skills = () => {
       color: "hover:text-javascript",
       icon: <RiJavascriptFill className={iconStyle} />,
       site: "https://developer.mozilla.org/pt-BR/docs/Web/JavaScript",
+    },
+    {
+      name: "Docker",
+      color: "hover:text-docker",
+      icon: <FaDocker className={iconStyle} />,
+      site: "https://www.docker.com",
     },
     {
       name: "Tailwind CSS",
@@ -85,6 +79,12 @@ const Skills = () => {
       icon: <BiLogoPostgresql className={iconStyle} />,
       site: "https://www.postgresql.org",
     },
+    {
+      name: "Git",
+      color: "hover:text-git",
+      icon: <FaGitAlt className={iconStyle} />,
+      site: "https://www.github.com",
+    },
   ];
 
   return (
@@ -95,7 +95,8 @@ const Skills = () => {
           {technologies?.map((tech, index) => (
             <div
               key={index}
-              className="min-w-[10rem] flex flex-col justify-center items-center mb-10"
+              className="w-[10rem] mb-10 flex flex-col justify-center items-center"
+              // className="min-w-[10rem] flex flex-col justify-center items-center mb-10"
             >
               <Link href={tech.site} target="blank">
                 <button className={`${tech.color}`}>

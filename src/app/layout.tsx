@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.className} ${letric.variable} bg-neutral-950 text-white tracking-wide`}
+        className={`${poppins.className} ${letric.variable} bg-neutral-950 text-white tracking-wide leading-relaxed`}
       >
         {children}
         <Analytics/>
