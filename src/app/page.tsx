@@ -10,8 +10,6 @@ import Services from "@/components/Sections/Services";
 import Contact from "@/components/Sections/Contact";
 import Footer from "@/components/Sections/Footer";
 import { AiOutlineArrowUp } from "react-icons/ai";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 const Home = () => {
   const [showBackToTop, setShowBackToTop] = useState<boolean>(false);
@@ -25,13 +23,6 @@ const Home = () => {
   };
 
   useEffect(() => {
-    AOS.init({
-      once: false,
-      disable: 'phone',
-      duration: 700,
-      easing: 'ease-out-sine',
-    });
-
     window.addEventListener('scroll', handleScroll);
 
     return () => {
