@@ -7,6 +7,7 @@ import Button from "@/components/Button";
 import emailjs from "@emailjs/browser";
 import { MdSend } from "react-icons/md";
 import showToast from "../../utils/showToast";
+import { motion } from "framer-motion";
 
 const Form = () => {
   const [formData, setFormData] = useState<FormDataType | any>({
@@ -71,7 +72,13 @@ const Form = () => {
   };
 
   return (
-    <section data-aos="fade-right" className="py-20 w-full space-y-[5rem] md:space-y-[10rem]">
+    <motion.section
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      className="py-20 w-full space-y-[5rem] md:space-y-[10rem]"
+    >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col justify-center items-center">
         <form
           onSubmit={sendEmail}
@@ -92,7 +99,7 @@ const Form = () => {
           <Button icon={MdSend}>Enviar Mensagem</Button>
         </form>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

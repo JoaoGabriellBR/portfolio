@@ -6,6 +6,7 @@ import Image from "next/image";
 import { VscGithub } from "react-icons/vsc";
 import { GoLinkExternal } from "react-icons/go";
 import { ProjectItemProps } from "@/utils/types";
+import { motion } from "framer-motion";
 
 const ProjectItem = ({ project }: ProjectItemProps) => {
   const [isHovered, setIsHovered] = useState<boolean>(false);
@@ -21,9 +22,12 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
       onMouseLeave={() => handleChange(false)}
       className={divMain}
     >
-      <div
-        data-aos="zoom-out"
-        className={`w-full h-full flex flex-col justify-center items-center relative`}
+      <motion.div
+       initial={{ opacity: 0, y: 50 }}
+       whileInView={{ opacity: 1, y: 0 }}
+       viewport={{ once: true }}
+       transition={{ duration: 0.5 }}
+       className={`w-full h-full flex flex-col justify-center items-center relative`}
       >
         {isHovered ? (
           <div className="hover:relative w-full flex flex-row justify-center items-center space-x-4">
@@ -57,7 +61,7 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
             style={{ zIndex: -1 }}
           ></div>
         )}
-      </div>
+      </motion.div>
     </div>
   );
 };

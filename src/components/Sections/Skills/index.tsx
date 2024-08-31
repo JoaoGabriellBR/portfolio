@@ -7,6 +7,7 @@ import {
   BiLogoPostgresql,
   BiLogoTypescript,
 } from "react-icons/bi";
+import { motion } from "framer-motion";
 
 const Skills = () => {
   const iconStyle =
@@ -88,7 +89,14 @@ const Skills = () => {
   ];
 
   return (
-    <section id="tecnologias" data-aos="zoom-out" className="py-7 w-full">
+    <motion.section
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      id="tecnologias"
+      className="py-7 w-full"
+    >
       <div className="max-w-6xl mx-auto space-y-10 px-4 sm:px-6">
         <h1 className="text-center text-[1.5rem] font-bold">Tecnologias</h1>
         <div className="w-full flex flex-row flex-wrap justify-center md:justify-between items-center">
@@ -99,16 +107,14 @@ const Skills = () => {
               // className="min-w-[10rem] flex flex-col justify-center items-center mb-10"
             >
               <Link href={tech.site} target="blank">
-                <button className={`${tech.color}`}>
-                  {tech.icon}
-                </button>
+                <button className={`${tech.color}`}>{tech.icon}</button>
               </Link>
               <p className="text-sm">{tech.name}</p>
             </div>
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -1,4 +1,5 @@
 import { JobEvent, EducationEvent, PropsTimeline } from "@/utils/types";
+import { motion } from 'framer-motion';
 
 const Timeline = ({ events, Icon }: PropsTimeline) => {
 
@@ -8,32 +9,38 @@ const Timeline = ({ events, Icon }: PropsTimeline) => {
   const divCardStyle = "w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-4 flex flex-col justify-start";
   const divTitle = "flex flex-row justify-start space-x-2 items-center flex-wrap";
   const iconStyle = "fill-current text-black w-5 h-5";
-  const titleStyle = "text-xl font-bold"
+  const titleStyle = "text-xl font-bold";
   const dateStyle = "font-caveat text-neutral-400 text-[0.7rem]";
   const occupationStyle = "text-neutral-400 text-md mb-2 font-bold";
   const descriptionStyle = "text-neutral-400";
 
   return (
-    <>
-      <div data-aos="fade-right" className={divMainStyle}>
-        {events?.map((item: JobEvent | EducationEvent, index: number) => (
-          <div key={index} className={divItemStyle}>
-            <div className={divIconStyle}>
-              <Icon className={iconStyle} />
-            </div>
-            <div className={divCardStyle}>
-              <div className={divTitle}>
-                <h1 className={titleStyle}>{item.title}</h1>
-                <time className={dateStyle}>{item.date}</time>
-              </div>
-              <h2 className={occupationStyle}>{item.occupation}</h2>
-              <p className={descriptionStyle}>{item.description}</p>
-            </div>
+    <div className={divMainStyle}>
+      {events?.map((item: JobEvent | EducationEvent, index: number) => (
+        <motion.div 
+          key={index} 
+          className={divItemStyle}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <div className={divIconStyle}>
+            <Icon className={iconStyle} />
           </div>
-        ))}
-      </div>
-    </>
+          <div className={divCardStyle}>
+            <div className={divTitle}>
+              <h1 className={titleStyle}>{item.title}</h1>
+              <time className={dateStyle}>{item.date}</time>
+            </div>
+            <h2 className={occupationStyle}>{item.occupation}</h2>
+            <p className={descriptionStyle}>{item.description}</p>
+          </div>
+        </motion.div>
+      ))}
+    </div>
   );
 };
+
 
 export default Timeline;
