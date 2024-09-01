@@ -31,18 +31,17 @@ const AboutMe = () => {
         <div className="flex flex-col items-center md:items-start w-full space-y-5 text-center md:text-start col-span-2">
           <h1 className={titleStyles}>Sobre mim</h1>
           <p className="text-neutral-400">
-            Desenvolvedor de Software focado em aplicações web e mobile, com
+            Sou um Desenvolvedor de Software focado em aplicações web e mobile, com
             habilidades em{" "}
             <span className="text-white">
-              React, Next.js, Node.js, TypeScript, MySQL e Docker
+              React, React Native, Next.js, Node.js, TypeScript, MySQL e Docker
             </span>
             .
           </p>
           <p className="text-neutral-400">
-            Minha experiência inclui desenvolvimento ágil e colaborativo,
-            englobando a criação e manutenção de APIs, websites estáticos e
-            sistemas back office. Também tenho experiência em sustentação de
-            sistemas, modelagem e consulta de dados.
+            Possuo experiência na criação e manutenção de APIs, landing pages,
+            sistema ERP e e-commerce. Competente na sustentação de sistemas, bem
+            como na modelagem e consulta de dados.
           </p>
 
           <SocialMedias />

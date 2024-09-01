@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { GrMysql } from "react-icons/gr";
 import { FaReact, FaNodeJs, FaDocker, FaSass, FaGitAlt } from "react-icons/fa";
-import { SiPython, SiDjango, SiNextdotjs, SiTailwindcss, SiPrisma } from "react-icons/si";
+import { SiExpo, SiNextdotjs, SiTailwindcss, SiPrisma } from "react-icons/si";
 import { RiJavascriptFill } from "react-icons/ri";
 import {
   BiLogoPostgresql,
   BiLogoTypescript,
 } from "react-icons/bi";
+import { TbBrandReactNative } from "react-icons/tb";
 import { motion } from "framer-motion";
 
 const Skills = () => {
@@ -21,10 +22,22 @@ const Skills = () => {
       site: "https://legacy.reactjs.org",
     },
     {
+      name: "React Native",
+      color: "hover:text-react_native",
+      icon: <TbBrandReactNative className={iconStyle} />,
+      site: "https://reactnative.dev",
+    },
+    {
       name: "Next",
       color: "hover:text-next",
       icon: <SiNextdotjs className={iconStyle} />,
       site: "https://nextjs.org",
+    },
+    {
+      name: "Expo",
+      color: "hover:text-expo",
+      icon: <SiExpo className={iconStyle} />,
+      site: "https://docs.expo.dev",
     },
     {
       name: "Node",
@@ -103,8 +116,7 @@ const Skills = () => {
           {technologies?.map((tech, index) => (
             <div
               key={index}
-              className="w-[10rem] mb-10 flex flex-col justify-center items-center"
-              // className="min-w-[10rem] flex flex-col justify-center items-center mb-10"
+              className="w-[9rem] mb-10 flex flex-col justify-center items-center"
             >
               <Link href={tech.site} target="blank">
                 <button className={`${tech.color}`}>{tech.icon}</button>

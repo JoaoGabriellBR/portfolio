@@ -16,6 +16,8 @@ const config: Config = {
       },
       colors: {
         react: "#61DBFB",
+        react_native: "#0A89A6",
+        expo: "#f2f2f2",
         next: "#f2f2f2",
         node: "#6cc24a",
         typescript: "#3178c6",
