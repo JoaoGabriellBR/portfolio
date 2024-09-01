@@ -9,9 +9,11 @@ const Contact = () => {
   return (
     <>
       <ToastContainer />
-      <main className="flex flex-col overflow-hidden min-h-screen">
+      <main className="flex flex-col overflow-hidden h-screen">
         <Header />
-        <Form />
+        <div className="flex-grow">
+          <Form />
+        </div>
         <Footer />
       </main>
     </>

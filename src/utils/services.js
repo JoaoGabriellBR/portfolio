@@ -1,25 +1,23 @@
 import { BsFillDatabaseFill } from "react-icons/bs";
 import { SiAltiumdesigner } from "react-icons/si";
 import { MdOutlineSettingsEthernet } from "react-icons/md";
+import { FaLaptopCode, FaMobileAlt } from "react-icons/fa";
+import { GoDatabase } from "react-icons/go";
 
 const iconStyle =
   "w-20 h-20 mb-4 hover:scale-125 transition duration-500 ease-in-out";
 
 export const serviceData = [
   {
-    icon: <SiAltiumdesigner className={iconStyle} />,
-    services: ["Sistemas de Gerenciamento", "Integração de design", "Design Responsivo"],
+    icon: <FaLaptopCode className={iconStyle} />,
+    services: ["Front end"],
   },
   {
-    icon: <MdOutlineSettingsEthernet className={iconStyle} />,
-    services: ["Landing Pages", "Lojas Virtuais", "Blogs"],
+    icon: <GoDatabase className={iconStyle} />,
+    services: ["Back end"],
   },
   {
-    icon: <BsFillDatabaseFill className={iconStyle} />,
-    services: [
-      "Modelagem de Banco de Dados",
-      "Ferramentas de Automação",
-      "Desenvolvimento de APIs",
-    ],
+    icon: <FaMobileAlt className={iconStyle} />,
+    services: ["Mobile"],
   },
 ];
