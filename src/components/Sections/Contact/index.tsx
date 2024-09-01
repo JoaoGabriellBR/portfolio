@@ -5,16 +5,15 @@ import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <motion.section
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
-      id="contato"
-      className="py-7 w-full"
-    >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-20 bg-neutral-900 rounded-0 md:rounded-[3rem]">
-        <div className="flex flex-col justify-center items-center text-center space-y-5 px-0 md:px-32">
+    <section id="contato" className="py-7 w-full h-full">
+      <div className="w-full mx-auto px-4 sm:px-6 py-20 bg-jumbotron bg-no-repeat bg-cover bg-fixed">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="flex flex-col justify-center items-center text-center space-y-5 px-0 md:px-32"
+        >
           <h1 className="text-4xl font-bold"> VAMOS CRIAR ALGO JUNTOS?</h1>
           <p className="text-neutral-400 text-md">
             Se você tem algum projeto em mente, ou deseja apenas bater um papo,
@@ -25,9 +24,9 @@ const Contact = () => {
               Fale comigo
             </Button>
           </Link>
-        </div>
+        </motion.div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 
