@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <body
         className={`${poppins.className} ${letric.variable} bg-neutral-950 text-white tracking-wide leading-relaxed`}
       >
