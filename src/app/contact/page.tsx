@@ -9,7 +9,7 @@ const Contact = () => {
   return (
     <>
       <ToastContainer />
-      <main className="flex flex-col overflow-hidden h-screen">
+      <main className="flex flex-col overflow-auto h-screen">
         <Header />
         <div className="flex-grow">
           <Form />
