@@ -24,8 +24,8 @@ const images = [
     className: "mx-auto w-2/3",
   },
   {
-    src: "/images/parallax/coffe.webp",
-    alt: "Small image of Koffie project",
+    src: "/images/parallax/xbox.webp",
+    alt: "Small image of Catalog project",
     start: -200,
     end: 200,
     className: "ml-auto w-1/3",

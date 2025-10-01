@@ -1,7 +1,6 @@
 import catalog from "./catalog";
 import adidas from "./adidas";
 import upwrite from "./upwrite";
-import koffie from "./koffie";
 import solartoy from "./solartoy";
 import darkbulls from "./darkbulls";
 
@@ -9,7 +8,6 @@ const myProjects = {
   catalog,
   adidas,
   upwrite,
-  koffie,
   solartoy,
   darkbulls,
   // future projects...
