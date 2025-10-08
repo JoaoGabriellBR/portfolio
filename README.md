@@ -7,7 +7,9 @@
 
 > ♦️ Portfólio pessoal construído com Next.js, TypeScript, Framer Motion, GSAP e Tailwind CSS. Apresenta meus projetos, certificações e formas de contato em múltiplos idiomas.
 
-![Preview](./public/images/second-suit.png)
+<div align="center">
+  <img src="./public/images/second-suit.png" alt="suit" height="600" width="600">
+</div>
 
 ## ✨ Features
 - Interface responsiva em React.js
@@ -16,6 +18,7 @@
 - Internacionalização (pt, en, es, fr, de)
 - Formulário de contato integrado ao EmailJS
 - Dados tipados com TypeScript
+- SEO técnico
 
 ## ���️ Stack
 - **Next.js**
@@ -38,8 +41,8 @@
 ### Instalação
 
 ```bash
-git clone https://github.com/<seu-usuario>/Portfolio-2.0.git
-cd Portfolio-2.0
+git clone https://github.com/<seu-usuario>/Portfolio.git
+cd Portfolio
 npm install
 ```
 
